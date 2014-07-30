@@ -1,9 +1,18 @@
 /**
+ * Fonts
+ */
+@font-face{
+	font-family: "StreetFighter";
+	src: local("â˜¼"),
+	url("../fonts/StreetFighter.woff") format('woff'),
+	url("../fonts/StreetFighter.ttf") format('truetype')
+}
+
+/**
  * Base
  */
 body {
 	background-color: #ccc;
-	font-family: verdana, arial, sans-serif;
 	margin: 25px auto;
 	width: 960px;
 }
@@ -17,6 +26,12 @@ main {
 	overflow: hidden;
 	width: 679px;
 	margin: 0 auto 25px auto;
+}
+h1 {
+	font-family: 'StreetFighter';
+	font-size: 50px;
+	margin: 0;
+	text-align: center;
 }
 
 /* Position */
