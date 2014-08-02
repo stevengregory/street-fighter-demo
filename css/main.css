@@ -238,5 +238,5 @@ main .entrance {
 
 /* Game Over */
 .game-over {
-	background: #000 url('../images/game-over.jpg') no-repeat center;
+	background: #000 url('../images/game/game-over.jpg') no-repeat center;
 }
