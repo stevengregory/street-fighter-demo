@@ -1,0 +1,13 @@
+{
+  "name": "street-fighter-demo",
+  "version": "0.1.0",
+  "author": "Steven Gregory",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-htmlhint": "*",
+    "matchdep": "*"
+  }
+}
