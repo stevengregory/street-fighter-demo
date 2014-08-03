@@ -1,4 +1,4 @@
 // require js bootstrap
-require(['character'], function(c) {
-    c.start();
+require(['actions'], function(a) {
+    a.start();
 });
