@@ -1,11 +1,10 @@
-define(['jquery'], function($) {
+define(['jquery', 'character'], function($, c) {
 
     var start = function() {
         characterActions();
     };
 
     var characterActions = function() {
-        var character = $('main span');
 
         var Action = function (movement, timing, key, step, sound) {
             this.movement = movement;
@@ -16,20 +15,20 @@ define(['jquery'], function($) {
         };
 
         var stopAction = function (move, time) {
-            return setTimeout(function() { character.removeClass(move); }, time);
+            return setTimeout(function() { c.character.removeClass(move); }, time);
         };
 
         Action.prototype.execute = function() {
-            if (!character.hasClass(this.movement)) {
-                character.addClass(this.movement);
+            if (!c.character.hasClass(this.movement)) {
+                c.character.addClass(this.movement);
                 stopAction(this.movement, this.timing);
                 if (this.sound !== false) {
                     var sound = new Audio(config.SOUND_DIR + this.sound);
                     sound.play();
                 }
             }
-            if (this.step !== false && !character.hasClass('entrance')) {
-                $(character).css({ marginLeft: '+=' + this.step });
+            if (this.step !== false && !c.character.hasClass('entrance')) {
+                $(c.character).css({ marginLeft: '+=' + this.step });
             }
             if (this.key === 81) {
                 quitGame();
@@ -56,13 +55,13 @@ define(['jquery'], function($) {
 
         var entrance = function() {
             actions.entrance.execute();
-            character.addClass('stance');
+            c.character.addClass('stance');
         }();
 
         var quitGame = function () {
             var background = $('main');
             background.addClass('game-over');
-            character.hide();
+            c.character.hide();
             actions = null;
         };
 
