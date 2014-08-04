@@ -1,4 +1,4 @@
-define(['jquery', 'character'], function($, c) {
+define(['jquery', 'character', 'quit'], function($, c, q) {
 
     var start = function() {
         characterActions();
@@ -14,7 +14,7 @@ define(['jquery', 'character'], function($, c) {
             this.sound = sound;
         };
 
-        var stopAction = function (move, time) {
+        var stopAction = function(move, time) {
             return setTimeout(function() { c.character.removeClass(move); }, time);
         };
 
@@ -31,7 +31,7 @@ define(['jquery', 'character'], function($, c) {
                 $(c.character).css({ marginLeft: '+=' + this.step });
             }
             if (this.key === 81) {
-                quitGame();
+                q.quit();
             }
         };
 
@@ -57,13 +57,6 @@ define(['jquery', 'character'], function($, c) {
             actions.entrance.execute();
             c.character.addClass('stance');
         }();
-
-        var quitGame = function () {
-            var background = $('main');
-            background.addClass('game-over');
-            c.character.hide();
-            actions = null;
-        };
 
         $(document).on('keyup', function(e) {
             for (move in actions) {
