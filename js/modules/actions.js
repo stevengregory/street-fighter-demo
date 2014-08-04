@@ -1,10 +1,6 @@
 define(['jquery', 'character', 'quit'], function($, c, q) {
 
     var start = function() {
-        characterActions();
-    };
-
-    var characterActions = function() {
 
         var Action = function (movement, timing, key, step, sound) {
             this.movement = movement;
