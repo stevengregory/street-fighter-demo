@@ -1,4 +1,3 @@
-// general config
 var config = {
     SOUND_DIR: 'sounds/',
     WALK_FORWARD: 20,
