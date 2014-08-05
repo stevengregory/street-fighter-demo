@@ -1,3 +1,3 @@
-require(['actions'], function(a) {
-    a.start();
+require(['entrance'], function(e) {
+    e.entrance();
 });
