@@ -1,4 +1,4 @@
-define(['jquery', 'character', 'actions'], function($, c, a) {
+define(['jquery', 'character', 'actions', 'keyCode'], function($, c, a) {
 
     var entrance = function() {
         a.actions.entrance.execute();

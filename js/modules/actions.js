@@ -47,15 +47,7 @@ define(['jquery', 'character', 'quit'], function($, c, q) {
         entrance: new Action('entrance', 8000, false, null, false)
     };
 
-    $(document).on('keyup', function(e) {
-        for (move in actions) {
-            if (actions[move].key === e.keyCode) {
-                actions[move].execute();
-            }
-        }
-    });
-
     return {
-       actions: actions
+        actions: actions
     };
 });
