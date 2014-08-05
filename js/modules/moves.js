@@ -11,9 +11,9 @@ define(function() {
         jump: {'movement': 'jump', 'timing': 1250, 'key': 38, 'step': false, 'sound': false},
         jumpingUppercut: {'movement': 'jumping-uppercut', 'timing': 1800, 'key': 52, 'step': false, 'sound': 'jumping-uppercut.wav'},
         uppercut: {'movement': 'uppercut', 'timing': 900, 'key': 85, 'step': false, 'sound': 'uppercut.wav'},
+        walk: {'movement': 'walk', 'timing': 700, 'key': 39, 'step': 30, 'sound': false},
+        walkBackwards: {'movement': 'walk-backwards', 'timing': 700, 'key': 37, 'step': -30, 'sound': false},
         walk: {'movement': 'walk', 'timing': 700, 'key': 39, 'step': 30, 'sound': false}
-        walkBackwards: {'movement': 'walk-backwards', 'timing': 700, 'key': 37, 'step': -30, 'sound': false}
-        walk: new Action({'movement': 'walk', 'timing': 700, 'key': 39, 'step': 30, 'sound': false})
     };
 
     return {
