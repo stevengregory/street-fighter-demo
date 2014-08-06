@@ -1,28 +1,26 @@
 define(['jquery', 'character', 'quit'], function($, c, q) {
 
-    var Action = function (movement, timing, key, step, sound) {
+    var Action = function (movement, key, step, sound) {
         this.movement = movement;
-        this.timing = timing;
         this.key = key;
         this.step = step;
         this.sound = sound;
     };
 
-    var stopAction = function(move, time) {
-        return setTimeout(function() { c.character.removeClass(move); }, time);
-    };
-
     Action.prototype.execute = function() {
+        var self = this;
+        if (this.step !== false && !c.character.hasClass('entrance')) {
+            $(c.character).css({ marginLeft: '+=' + this.step });
+        }
         if (!c.character.hasClass(this.movement)) {
             c.character.addClass(this.movement);
-            stopAction(this.movement, this.timing);
+            c.character.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
+                c.character.removeClass(self.movement);
+            });
             if (this.sound !== false) {
                 var sound = new Audio(config.SOUND_DIR + this.sound);
                 sound.play();
             }
-        }
-        if (this.step !== false && !c.character.hasClass('entrance')) {
-            $(c.character).css({ marginLeft: '+=' + this.step });
         }
         if (this.key === 81) {
             q.quit();
@@ -30,21 +28,21 @@ define(['jquery', 'character', 'quit'], function($, c, q) {
     };
 
     var actions = {
-        walk: new Action('walk', 700, 39, 30, false),
-        walkBackwards: new Action('walk-backwards', 700, 37, -30, false),
-        jab: new Action('jab', 200, 74, false, 'jab.wav'),
-        cross: new Action('cross', 400, 67, false, 'cross.wav'),
-        hook: new Action('hook', 400, 72, false, 'hook.wav'),
-        uppercut: new Action('uppercut', 900, 85, false, 'uppercut.wav'),
-        jumpingUppercut: new Action('jumping-uppercut', 1800, 52, false, 'jumping-uppercut.wav'),
-        combo: new Action('combo', 1250, 49, false, 'combo.wav'),
-        combo2: new Action('combo-2', 2600, 50, false, 'combo2.wav'),
-        specialCombo: new Action('special-combo', 2600, 51, false, 'special.wav'),
-        jump: new Action('jump', 1250, 38, false, false),
-        crouch: new Action('crouch', 150, 40, false, false),
-        block: new Action('block', 1000, 66, false, false),
-        fall: new Action('fall', 6500, 81, false, 'fall.wav'),
-        entrance: new Action('entrance', 8000, false, null, false)
+        walk: new Action('walk', 39, 30, false),
+        walkBackwards: new Action('walk-backwards', 37, -30, false),
+        jab: new Action('jab', 74, false, 'jab.wav'),
+        cross: new Action('cross', 67, false, 'cross.wav'),
+        hook: new Action('hook', 72, false, 'hook.wav'),
+        uppercut: new Action('uppercut', 85, false, 'uppercut.wav'),
+        jumpingUppercut: new Action('jumping-uppercut', 52, false, 'jumping-uppercut.wav'),
+        combo: new Action('combo', 49, false, 'combo.wav'),
+        combo2: new Action('combo-2', 50, false, 'combo2.wav'),
+        specialCombo: new Action('special-combo', 51, false, 'special.wav'),
+        jump: new Action('jump', 38, false, false),
+        crouch: new Action('crouch', 40, false, false),
+        block: new Action('block', 66, false, false),
+        fall: new Action('fall', 81, false, 'fall.wav'),
+        entrance: new Action('entrance', false, false, false)
     };
 
     return {

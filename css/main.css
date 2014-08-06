@@ -72,8 +72,8 @@ main .stance {
 
 /* Walk */
 main .walk {
-	-webkit-animation: 0.7s steps(12, end) 0s normal none infinite walk;
-	animation: 0.7s steps(12, end) 0s normal none infinite walk;
+	-webkit-animation: 0.7s steps(12, end) 0s normal none 1 walk;
+	animation: 0.7s steps(12, end) 0s normal none 1 walk;
 	background-image: url('../images/sprites/walk.png');
 	height: 125px;
 	width: 116px;
@@ -89,8 +89,8 @@ main .walk {
 
 /* Walk Backwards */
 main .walk-backwards {
-	-webkit-animation: 0.7s steps(12, end) 0s normal none infinite walk-backwards;
-	animation: 0.7s steps(12, end) 0s normal none infinite walk-backwards;
+	-webkit-animation: 0.7s steps(12, end) 0s normal none 1 walk-backwards;
+	animation: 0.7s steps(12, end) 0s normal none 1 walk-backwards;
 	background-image: url('../images/sprites/walk-backwards.png');
 	height: 128px;
 	width: 109px;
