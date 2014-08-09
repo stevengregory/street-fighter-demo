@@ -11,7 +11,7 @@ It's a work in progress, but hope you enjoy!
 
 * Walk Forward `right`
 * Walk Backward `left`
-* Crouch `down`
+* Duck `down`
 * Jump `up`
 * Block `b`
 * Jab: `j`
