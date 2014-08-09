@@ -10,7 +10,7 @@ define(['jquery', 'character', 'quit'], function($, c, q) {
     Action.prototype.execute = function() {
         var self = this;
         if (this.step !== false && !c.character.hasClass('entrance')) {
-            $(c.character).css({ marginLeft: '+=' + this.step });
+            c.character.css({ marginLeft: '+=' + this.step });
         }
         if (!c.character.hasClass(this.movement)) {
             c.character.addClass(this.movement);
