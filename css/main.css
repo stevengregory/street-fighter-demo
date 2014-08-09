@@ -121,19 +121,19 @@ main .jump {
 	to { background-position: -2544px 193px; }
 }
 
-/* Crouch */
-main .crouch {
-	-webkit-animation: 0.8s steps(10, end) 0s normal none 1 crouch;
-	animation: 0.8s steps(10, end) 0s normal none 1 crouch;
-	background: url('../images/sprites/crouch.png');
+/* Duck */
+main .duck {
+	-webkit-animation: 0.8s steps(10, end) 0s normal none 1 duck;
+	animation: 0.8s steps(10, end) 0s normal none 1 duck;
+	background: url('../images/sprites/duck.png');
 	height: 76px;
 	width: 97px;
 }
-@-webkit-keyframes crouch {
+@-webkit-keyframes duck {
 	from { background-position: 0px 76px; }
 	to { background-position: -970px 76px; }
 }
-@keyframes crouch {
+@keyframes duck {
 	from { background-position: 0px 76px; }
 	to { background-position: -970px 76px; }
 }

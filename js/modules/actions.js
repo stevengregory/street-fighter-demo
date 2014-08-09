@@ -39,7 +39,7 @@ define(['jquery', 'character', 'quit'], function($, c, q) {
         combo2: new Action('combo-2', 50, false, 'combo2.wav'),
         specialCombo: new Action('special-combo', 51, false, 'special.wav'),
         jump: new Action('jump', 38, false, false),
-        crouch: new Action('crouch', 40, false, false),
+        duck: new Action('duck', 40, false, false),
         block: new Action('block', 66, false, false),
         fall: new Action('fall', 81, false, 'fall.wav'),
         entrance: new Action('entrance', false, false, false)

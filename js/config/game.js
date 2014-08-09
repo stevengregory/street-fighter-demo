@@ -1,5 +1,5 @@
 var config = {
     SOUND_DIR: 'sounds/',
-    WALK_FORWARD: 20,
-    WALK_BACKWARDS: 40
+    WALK_FORWARD: 30,
+    WALK_BACKWARDS: -30
 };
