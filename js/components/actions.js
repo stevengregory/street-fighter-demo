@@ -13,14 +13,14 @@ define(['jquery', 'character', 'quit'], function($, c, q) {
             c.character.css({ marginLeft: '+=' + this.step });
         }
         if (!c.character.hasClass(this.movement)) {
-            c.character.addClass(this.movement);
-            c.character.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
-                c.character.removeClass(self.movement);
-            });
             if (this.sound !== false) {
                 var sound = new Audio('sounds/' + this.sound);
                 sound.play();
             }
+            c.character.addClass(this.movement);
+            c.character.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
+                c.character.removeClass(self.movement);
+            });
         }
         if (this.key === 81) {
             q.quit();
