@@ -18,7 +18,7 @@ define(['jquery', 'character', 'quit'], function($, c, q) {
                 c.character.removeClass(self.movement);
             });
             if (this.sound !== false) {
-                var sound = new Audio(config.SOUND_DIR + this.sound);
+                var sound = new Audio('sounds/' + this.sound);
                 sound.play();
             }
         }
