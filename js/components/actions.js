@@ -1,6 +1,6 @@
 define(['jquery', 'character', 'quit'], function($, c, q) {
 
-    var Action = function (movement, key, step, sound) {
+    var Action = function(movement, key, step, sound) {
         this.movement = movement;
         this.key = key;
         this.step = step;
@@ -9,18 +9,27 @@ define(['jquery', 'character', 'quit'], function($, c, q) {
 
     Action.prototype.execute = function() {
         var self = this;
+        var animation = function() {
+            c.character.addClass(self.movement);
+            c.character.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
+                c.character.removeClass(self.movement);
+            });
+        };
         if (this.step !== false && !c.character.hasClass('entrance')) {
-            c.character.css({ marginLeft: '+=' + this.step });
+            c.character.css({
+                marginLeft: '+=' + this.step
+            });
         }
         if (!c.character.hasClass(this.movement)) {
             if (this.sound !== false) {
                 var sound = new Audio('sounds/' + this.sound);
-                sound.play();
+                sound.oncanplay = function() {
+                    sound.play();
+                    animation();
+                };
+            } else {
+                animation();
             }
-            c.character.addClass(this.movement);
-            c.character.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
-                c.character.removeClass(self.movement);
-            });
         }
         if (this.key === 81) {
             q.quit();
