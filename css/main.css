@@ -2,50 +2,104 @@
  * Fonts
  */
 @font-face{
-	font-family: "StreetFighter";
-	src: local("â˜¼"),
-	url("../fonts/StreetFighter.woff") format('woff'),
-	url("../fonts/StreetFighter.ttf") format('truetype')
+    font-family: "StreetFighter";
+    src: local("â˜¼"),
+    url("../fonts/StreetFighter.woff") format('woff'),
+    url("../fonts/StreetFighter.ttf") format('truetype')
 }
 
 /**
  * Base
  */
 body {
-	background-color: #ccc;
-	margin: 25px auto;
-	width: 960px;
+    background-color: #ccc;
+    margin: 25px auto;
+    width: 960px;
 }
 
 /**
  * Main Module
  */
 main {
-	background: url('../images/stages/honda.png') no-repeat;
-	height: 224px;
-	overflow: hidden;
-	width: 679px;
-	margin: 0 auto 25px auto;
+    background: url('../images/stages/honda.png') no-repeat;
+    height: 224px;
+    overflow: hidden;
+    width: 575px;
+    margin: 0 auto 25px auto;
 }
 h1 {
-	font-family: 'StreetFighter';
-	font-size: 50px;
-	margin: 0;
-	text-align: center;
+    font-family: 'StreetFighter';
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+}
+
+/**
+ * Health Module
+ */
+.health {
+    background: url('../images/character/health.png') no-repeat;
+    height: 44px;
+    position: absolute;
+    margin: 10px 0 0 10px;
+    width: 225px;
+    z-index: 2;
+}
+
+/* Health Bar */
+.health progress {
+    float: left;
+    height: 8px;
+    margin: 2px;
+    z-index: 1;
+}
+.health progress::-moz-progress-bar {
+    background-image: linear-gradient(to bottom, #17d120, #66e860, #17d120);
+}
+.health progress::-webkit-progress-value {
+    background-image: linear-gradient(to bottom, #17d120, #66e860, #17d120);
+}
+.health progress[value] {
+    background: #eee;
+    border: none;
+    color: #66e860;
+    width: 219px;
+}
+
+/* Player Icon */
+.health .player-icon {
+    background-image: url('../images/character/dudley.png');
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 1px 2px 2px 6px;
+    width: 27px;
+}
+
+/* Player Name */
+.health p {
+    color: #fff;
+    float: left;
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: -2px 0 0 20px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-transform: uppercase;
 }
 
 /* Position */
-main div {
-	height: 193px;
-	left: 275px;
-	position: relative;
-	top: 15px;
-	width: 127px;
+main .character {
+    height: 193px;
+    left: 275px;
+    position: relative;
+    top: 15px;
+    width: 127px;
 }
-main span {
-	position: absolute;
-	bottom: 0;
-	text-align: right !important;
+main .character span {
+    position: absolute;
+    bottom: 0;
+    text-align: right !important;
 }
 
 /**
@@ -54,94 +108,88 @@ main span {
 
 /* Stance */
 main .stance {
-	-webkit-animation: 1.5s steps(20, end) 0s normal none infinite stance;
-	animation: 1.5s steps(20, end) 0s normal none infinite stance;
-	background-image: url('../images/sprites/stance.png');
-	height: 116px;
-	margin-left: -225px;
-	width: 106px;
+    -webkit-animation: 1.5s steps(20, end) 0s normal none infinite stance;
+    animation: 1.5s steps(20, end) 0s normal none infinite stance;
+    background-image: url('../images/sprites/stance.png');
+    height: 116px;
+    margin-left: -225px;
+    width: 106px;
 }
 @-webkit-keyframes stance {
-	from { background-position: 0px 116px; }
-	to { background-position: -2120px 116px; }
+    from { background-position: 0px 116px; }
+    to { background-position: -2120px 116px; }
 }
 @keyframes stance {
-	from { background-position: 0px 116px; }
-	to { background-position: -2120px 116px; }
+    from { background-position: 0px 116px; }
+    to { background-position: -2120px 116px; }
 }
 
 /* Walk */
 main .walk {
-	-webkit-animation: 0.7s steps(12, end) 0s normal none 1 walk;
-	animation: 0.7s steps(12, end) 0s normal none 1 walk;
-	background-image: url('../images/sprites/walk.png');
-	height: 125px;
-	width: 116px;
+    -webkit-animation: 0.7s steps(12, end) 0s normal none 1 walk;
+    animation: 0.7s steps(12, end) 0s normal none 1 walk;
+    background-image: url('../images/sprites/walk.png');
+    height: 125px;
+    width: 116px;
 }
 @-webkit-keyframes walk {
-	from { background-position: 0px 125px; }
-	to { background-position: -1392px 125px; }
+    from { background-position: 0px 125px; }
+    to { background-position: -1392px 125px; }
 }
 @keyframes walk {
-	from { background-position: 0px 125px; }
-	to { background-position: -1392px 125px; }
+    from { background-position: 0px 125px; }
+    to { background-position: -1392px 125px; }
 }
 
 /* Walk Backwards */
 main .walk-backwards {
-	-webkit-animation: 0.7s steps(12, end) 0s normal none 1 walk-backwards;
-	animation: 0.7s steps(12, end) 0s normal none 1 walk-backwards;
-	background-image: url('../images/sprites/walk-backwards.png');
-	height: 128px;
-	width: 109px;
+    -webkit-animation: 0.7s steps(12, end) 0s normal none 1 walk-backwards;
+    animation: 0.7s steps(12, end) 0s normal none 1 walk-backwards;
+    background-image: url('../images/sprites/walk-backwards.png');
+    height: 128px;
+    width: 109px;
 }
 @-webkit-keyframes walk-backwards {
-	from { background-position: 0px 128px; }
-	to { background-position: -1308px 128px; }
+    from { background-position: 0px 128px; }
+    to { background-position: -1308px 128px; }
 }
 @keyframes walk-backwards {
-	from { background-position: 0px 128px; }
-	to { background-position: -1308px 128px; }
+    from { background-position: 0px 128px; }
+    to { background-position: -1308px 128px; }
 }
 
 /* Jump */
 main .jump {
-	-webkit-animation: 1.3s steps(24, end) 0s normal none 1 jump;
-	animation: 1.3s steps(24, end) 0s normal none 1 jump;
-	background-image: url('../images/sprites/jump.png');
-	height: 193px;
-	width: 106px;
+    -webkit-animation: 1.3s steps(24, end) 0s normal none 1 jump;
+    animation: 1.3s steps(24, end) 0s normal none 1 jump;
+    background-image: url('../images/sprites/jump.png');
+    height: 193px;
+    width: 106px;
 }
 @-webkit-keyframes jump {
-	from { background-position: 0px 193px; }
-	to { background-position: -2544px 193px; }
+    from { background-position: 0px 193px; }
+    to { background-position: -2544px 193px; }
 }
 @keyframes jump {
-	from { background-position: 0px 193px; }
-	to { background-position: -2544px 193px; }
+    from { background-position: 0px 193px; }
+    to { background-position: -2544px 193px; }
 }
 
 /* Duck */
 main .duck {
-	-webkit-animation: 0.8s steps(10, end) 0s normal none 1 duck;
-	animation: 0.8s steps(10, end) 0s normal none 1 duck;
-	background: url('../images/sprites/duck.png');
-	height: 76px;
-	width: 97px;
+    -webkit-animation: 0.8s steps(10, end) 0s normal none 1 duck;
+    animation: 0.8s steps(10, end) 0s normal none 1 duck;
+    background: url('../images/sprites/duck.png');
+    height: 76px;
+    width: 97px;
 }
 @-webkit-keyframes duck {
-	from { background-position: 0px 76px; }
-	to { background-position: -970px 76px; }
+    from { background-position: 0px 76px; }
+    to { background-position: -970px 76px; }
 }
 @keyframes duck {
-	from { background-position: 0px 76px; }
-	to { background-position: -970px 76px; }
-}
-
-main .fall {
-	background: url('../images/dudley/fall.gif') no-repeat bottom;
-	height: 120px;
-	width: 177px;
+    from { background-position: 0px 76px; }
+    to { background-position: -970px 76px; }
 }
 
 /**
@@ -150,120 +198,104 @@ main .fall {
 
 /* Jab */
 main .jab {
-	-webkit-animation: 0.4s steps(6, end) 0s normal none 1 jab;
-	animation: 0.4s steps(6, end) 0s normal none 1 jab;
-	background-image: url('../images/sprites/jab.png');
-	height: 113px;
-	width: 141px;
+    -webkit-animation: 0.4s steps(6, end) 0s normal none 1 jab;
+    animation: 0.4s steps(6, end) 0s normal none 1 jab;
+    background-image: url('../images/sprites/jab.png');
+    height: 113px;
+    width: 141px;
 }
 @-webkit-keyframes jab {
-	from { background-position: 0px 113px; }
-	to { background-position: -846px 113px; }
+    from { background-position: 0px 113px; }
+    to { background-position: -846px 113px; }
 }
 @keyframes jab {
-	from { background-position: 0px 113px; }
-	to { background-position: -846px 113px; }
+    from { background-position: 0px 113px; }
+    to { background-position: -846px 113px; }
 }
 
 /* Cross */
 main .cross {
-	-webkit-animation: 0.4s steps(8, end) 0s normal none 1 cross;
-	animation: 0.4s steps(8, end) 0s normal none 1 cross;
-	background: url('../images/sprites/cross.png');
-	height: 113px;
-	width: 155px;
+    -webkit-animation: 0.4s steps(8, end) 0s normal none 1 cross;
+    animation: 0.4s steps(8, end) 0s normal none 1 cross;
+    background: url('../images/sprites/cross.png');
+    height: 113px;
+    width: 155px;
 }
 @-webkit-keyframes cross {
-	from { background-position: 0px 113px; }
-	to { background-position: -1240px 113px; }
+    from { background-position: 0px 113px; }
+    to { background-position: -1240px 113px; }
 }
 @keyframes cross {
-	from { background-position: 0px 113px; }
-	to { background-position: -1240px 113px; }
+    from { background-position: 0px 113px; }
+    to { background-position: -1240px 113px; }
 }
 
 /* Hook */
 main .hook {
-	-webkit-animation: 0.4s steps(13, end) 0s normal none 1 hook;
-	animation: 0.4s steps(13, end) 0s normal none 1 hook;
-	background-image: url('../images/sprites/hook.png');
-	height: 116px;
-	width: 118px;
+    -webkit-animation: 0.4s steps(13, end) 0s normal none 1 hook;
+    animation: 0.4s steps(13, end) 0s normal none 1 hook;
+    background-image: url('../images/sprites/hook.png');
+    height: 116px;
+    width: 118px;
 }
 @-webkit-keyframes hook {
-	from { background-position: 0px 116px; }
-	to { background-position: -1534px 116px; }
+    from { background-position: 0px 116px; }
+    to { background-position: -1534px 116px; }
 }
 @keyframes hook {
-	from { background-position: 0px 116px; }
-	to { background-position: -1534px 116px; }
+    from { background-position: 0px 116px; }
+    to { background-position: -1534px 116px; }
 }
 
 /* Uppercut */
 main .uppercut {
-	-webkit-animation: 0.9s steps(18, end) 0s normal none 1 uppercut;
-	animation: 0.9s steps(18, end) 0s normal none 1 uppercut;
-	background-image: url('../images/sprites/uppercut.png');
-	height: 138px;
-	width: 127px;
+    -webkit-animation: 0.9s steps(18, end) 0s normal none 1 uppercut;
+    animation: 0.9s steps(18, end) 0s normal none 1 uppercut;
+    background-image: url('../images/sprites/uppercut.png');
+    height: 138px;
+    width: 127px;
 }
 @-webkit-keyframes uppercut {
-	from { background-position: 0px 138px; }
-	to { background-position: -2286px 138px; }
+    from { background-position: 0px 138px; }
+    to { background-position: -2286px 138px; }
 }
 @keyframes uppercut {
-	from { background-position: 0px 138px; }
-	to { background-position: -2286px 138px; }
+    from { background-position: 0px 138px; }
+    to { background-position: -2286px 138px; }
 }
 
 /* Jumping Uppercut */
 main .jumping-uppercut {
-	-webkit-animation: 1.7s steps(26, end) 0s normal none 1 jumping-uppercut;
-	animation: 1.7s steps(26, end) 0s normal none 1 jumping-uppercut;
-	background-image: url('../images/sprites/jumping-uppercut.png');
-	height: 199px;
-	width: 152px;
+    -webkit-animation: 1.7s steps(26, end) 0s normal none 1 jumping-uppercut;
+    animation: 1.7s steps(26, end) 0s normal none 1 jumping-uppercut;
+    background-image: url('../images/sprites/jumping-uppercut.png');
+    height: 199px;
+    width: 152px;
 }
 @-webkit-keyframes jumping-uppercut {
-	from { background-position: 0px 199px; }
-	to { background-position: -3952px 199px; }
+    from { background-position: 0px 199px; }
+    to { background-position: -3952px 199px; }
 }
 @keyframes jumping-uppercut {
-	from { background-position: 0px 199px; }
-	to { background-position: -3952px 199px; }
-}
-
-main .combo {
-	background: url('../images/dudley/combo.gif') no-repeat bottom;
-	height: 116px;
-	width: 261px;
-}
-main .combo-2 {
-	background: url('../images/dudley/combo-2.gif') no-repeat bottom;
-	height: 139px;
-	width: 292px;
-}
-main .special-combo {
-	background: url('../images/dudley/special-combo.gif') no-repeat bottom;
-	height: 131px;
-	width: 289px;
+    from { background-position: 0px 199px; }
+    to { background-position: -3952px 199px; }
 }
 
 /* Fighter Defenses Module */
 main .block {
-	-webkit-animation: 0.8s steps(10, end) 0s normal none 1 block;
-	animation: 0.8s steps(10, end) 0s normal none 1 block;
-	background-image: url('../images/sprites/block.png');
-	height: 114px;
-	width: 93px;
+    -webkit-animation: 0.8s steps(10, end) 0s normal none 1 block;
+    animation: 0.8s steps(10, end) 0s normal none 1 block;
+    background-image: url('../images/sprites/block.png');
+    height: 114px;
+    width: 93px;
 }
 @-webkit-keyframes block {
-	from { background-position: 0px 114px; }
-	to { background-position: -930px 114px; }
+    from { background-position: 0px 114px; }
+    to { background-position: -930px 114px; }
 }
 @keyframes block {
-	from { background-position: 0px 114px; }
-	to { background-position: -930px 114px; }
+    from { background-position: 0px 114px; }
+    to { background-position: -930px 114px; }
 }
 
 /**
@@ -272,23 +304,23 @@ main .block {
 
 /* Entrance */
 main .entrance {
-	-webkit-animation: 8.8s steps(63, end) 0s normal none 1 entrance;
-	animation: 8.8s steps(63, end) 0s normal none 1 entrance;
-	background-image: url('../images/sprites/entrance.png');
-	height: 219px;
-	margin-left: -275px;
-	width: 154px;
+    -webkit-animation: 8.8s steps(63, end) 0s normal none 1 entrance;
+    animation: 8.8s steps(63, end) 0s normal none 1 entrance;
+    background-image: url('../images/sprites/entrance.png');
+    height: 219px;
+    margin-left: -275px;
+    width: 154px;
 }
 @-webkit-keyframes entrance {
-	from { background-position: 0px 219px; }
-	to { background-position: -9702px 219px; }
+    from { background-position: 0px 219px; }
+    to { background-position: -9702px 219px; }
 }
 @keyframes entrance {
-	from { background-position: 0px 219px; }
-	to { background-position: -9702px 219px; }
+    from { background-position: 0px 219px; }
+    to { background-position: -9702px 219px; }
 }
 
 /* Game Over */
 .game-over {
-	background: #000 url('../images/game/game-over.jpg') no-repeat center;
+    background: #000 url('../images/game/game-over.jpg') no-repeat center;
 }

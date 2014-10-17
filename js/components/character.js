@@ -1,6 +1,6 @@
 define(['jquery'], function($) {
 
-    var character = $('main span');
+    var character = $('.character span');
 
     return {
          character: character
