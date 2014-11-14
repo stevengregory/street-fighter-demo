@@ -1,4 +1,5 @@
 define(['jquery', 'character', 'actions', 'keyCode'], function($, c, a) {
+    'use strict';
 
     var entrance = function() {
         a.actions.entrance.execute();
@@ -6,6 +7,6 @@ define(['jquery', 'character', 'actions', 'keyCode'], function($, c, a) {
     };
 
     return {
-         entrance: entrance
+        entrance: entrance
     };
 });

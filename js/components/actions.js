@@ -1,4 +1,5 @@
 define(['jquery', 'character', 'quit'], function($, c, q) {
+    'use strict';
 
     var Action = function(movement, key, step, sound) {
         this.movement = movement;
