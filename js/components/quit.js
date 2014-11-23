@@ -2,10 +2,9 @@ define(['jquery', 'character'], function($, c) {
     'use strict';
 
     var quit = function() {
-        var background = $('main');
-        background.addClass('game-over');
-        c.character.hide();
+        $('main').addClass('game-over');
         $('.health').hide();
+        c.character.hide();
     };
 
     return {
