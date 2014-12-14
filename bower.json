@@ -1,0 +1,13 @@
+{
+  "name": "street-fighter-demo",
+  "version": "1.0.0",
+  "authors": [
+    "Steven Gregory"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "requirejs": "~2.1.13",
+    "jquery": "~2.1.1"
+  }
+}
