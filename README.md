@@ -24,9 +24,3 @@ A Street Fighter demo featuring the British boxer character Dudley. The demo was
 It's a work in progress, but hope you enjoy!
 
 http://demos.stevengregory.ninja/street-fighter/
-
-## Creator
-
-**Steven Gregory**
-
-- <http://twitter.com/sgregory>
