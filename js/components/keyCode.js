@@ -1,4 +1,7 @@
-define(['jquery', 'actions'], function($, a) {
+define([
+    'jquery',
+    'actions'
+], function($, a) {
     'use strict';
 
     $(document).on('keyup', function(e) {

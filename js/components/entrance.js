@@ -1,4 +1,9 @@
-define(['jquery', 'character', 'actions', 'keyCode'], function($, c, a) {
+define([
+    'jquery',
+    'character',
+    'actions',
+    'keyCode'
+], function($, c, a) {
     'use strict';
 
     var entrance = function() {
