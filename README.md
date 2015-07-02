@@ -1,6 +1,8 @@
 Street Fighter Demo
 ====================
 
+![](http://i.imgur.com/titqNDJ.png)
+
 ## Description
 
 A Street Fighter demo featuring the British boxer character Dudley. The demo was created using: HTML5, CSS3, JavaScript, jQuery, RequireJS, Bower and Grunt.
@@ -21,6 +23,6 @@ A Street Fighter demo featuring the British boxer character Dudley. The demo was
 
 ## Demo
 
-It's a work in progress, but hope you enjoy!
+Hope you enjoy!
 
 http://demos.stevengregory.ninja/street-fighter/
