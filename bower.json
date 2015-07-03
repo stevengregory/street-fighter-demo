@@ -8,6 +8,7 @@
   "private": true,
   "dependencies": {
     "requirejs": "~2.1.18",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "normalize.css": "~3.0.3"
   }
 }
