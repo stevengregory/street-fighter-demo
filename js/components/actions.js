@@ -44,18 +44,18 @@ define([
     var actions = {
         walk: new Action('walk', 39, 30, false),
         walkBackwards: new Action('walk-backwards', 37, -30, false),
-        jab: new Action('jab', 74, false, 'jab.wav'),
-        cross: new Action('cross', 67, false, 'cross.wav'),
-        hook: new Action('hook', 72, false, 'hook.wav'),
-        uppercut: new Action('uppercut', 85, false, 'uppercut.wav'),
-        jumpingUppercut: new Action('jumping-uppercut', 52, false, 'jumping-uppercut.wav'),
-        combo: new Action('combo', 49, false, 'combo.wav'),
-        combo2: new Action('combo-2', 50, false, 'combo2.wav'),
-        specialCombo: new Action('special-combo', 51, false, 'special.wav'),
+        jab: new Action('jab', 74, false, 'jab.mp3'),
+        cross: new Action('cross', 67, false, 'cross.mp3'),
+        hook: new Action('hook', 72, false, 'hook.mp3'),
+        uppercut: new Action('uppercut', 85, false, 'uppercut.mp3'),
+        jumpingUppercut: new Action('jumping-uppercut', 52, false, 'jumping-uppercut.mp3'),
+        combo: new Action('combo', 49, false, 'combo.mp3'),
+        combo2: new Action('combo-2', 50, false, 'combo2.mp3'),
+        specialCombo: new Action('special-combo', 51, false, 'special.mp3'),
         jump: new Action('jump', 38, false, false),
         duck: new Action('duck', 40, false, false),
         block: new Action('block', 66, false, false),
-        fall: new Action('fall', 81, false, 'fall.wav'),
+        fall: new Action('fall', 81, false, 'fall.mp3'),
         entrance: new Action('entrance', false, false, false)
     };
 
