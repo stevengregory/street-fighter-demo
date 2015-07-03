@@ -33,7 +33,7 @@ A Street Fighter demo featuring the British boxer character Dudley. The demo was
       <td><img src="http://upload.wikimedia.org/wikipedia/commons/d/d4/Opera_browser_logo_2013.png" height="40"></td>
     </tr>
     <tr>
-      <td align="center">✘</td>
+      <td align="center">✓</td>
       <td align="center">✓</td>
       <td align="center">✘</td>
       <td align="center">✓</td>
