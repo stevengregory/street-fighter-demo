@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp'),
     plug = require('gulp-load-plugins')();
 
@@ -13,9 +15,20 @@ gulp.task('jshint', function() {
         .pipe(plug.jshint.reporter());
 });
 
+gulp.task('sass', function() {
+    return gulp.src('css/sass/main.scss')
+        .pipe(plug.sass().on('error', plug.sass.logError))
+        .pipe(plug.sass({
+            outputStyle: 'compressed'
+        }))
+        .pipe(plug.rename('main.min.css'))
+        .pipe(gulp.dest('css'));
+});
+
 gulp.task('watch', function() {
     gulp.watch('index.html', ['htmlhint']);
     gulp.watch('js/**/*.js', ['jshint']);
+    gulp.watch('css/sass/*.scss', ['sass']);
 });
 
 gulp.task('default', ['htmlhint', 'jshint', 'watch']);

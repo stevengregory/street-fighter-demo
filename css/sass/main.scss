@@ -15,23 +15,21 @@ body {
     background-color: #ccc;
     margin: 25px auto;
     width: 960px;
-}
 
-/**
- * Main Module
- */
-main {
-    background: url('../images/stages/honda.png') no-repeat;
-    height: 224px;
-    overflow: hidden;
-    width: 575px;
-    margin: 0 auto 25px auto;
-}
-h1 {
-    font-family: 'StreetFighter';
-    font-size: 50px;
-    margin: 0;
-    text-align: center;
+    main {
+        background: url('../images/stages/honda.png') no-repeat;
+        height: 224px;
+        overflow: hidden;
+        width: 575px;
+        margin: 0 auto 25px auto;
+    }
+
+    h1 {
+        font-family: 'StreetFighter';
+        font-size: 50px;
+        margin: 0;
+        text-align: center;
+    }
 }
 
 /**
@@ -95,11 +93,12 @@ main .character {
     position: relative;
     top: 15px;
     width: 127px;
-}
-main .character span {
-    position: absolute;
-    bottom: 0;
-    text-align: right !important;
+
+   span {
+        position: absolute;
+        bottom: 0;
+        text-align: right !important;
+    }
 }
 
 /**

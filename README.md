@@ -5,7 +5,7 @@ Street Fighter Demo
 
 ## Description
 
-A Street Fighter demo featuring the British boxer character Dudley. The demo was created using: HTML5, CSS3, JavaScript, jQuery, RequireJS, Bower and Gulp.
+A Street Fighter demo featuring the British boxer character Dudley. The demo was created using: HTML5, CSS3, Sass, JavaScript, jQuery, RequireJS, Bower and Gulp.
 
 ## Keyboard Moves
 
