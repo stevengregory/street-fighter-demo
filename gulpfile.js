@@ -27,8 +27,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('bump', function() {
-    return gulp
-        .src(['./bower.json', './package.json'])
+    return gulp.src(['./bower.json', './package.json'])
         .pipe(plug.bump({
             version: args.version
         }))
