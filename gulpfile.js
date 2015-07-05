@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp'),
+    args = require('yargs').argv,
     plug = require('gulp-load-plugins')();
 
 gulp.task('htmlhint', function() {
@@ -23,6 +24,15 @@ gulp.task('sass', function() {
         }))
         .pipe(plug.rename('main.min.css'))
         .pipe(gulp.dest('css'));
+});
+
+gulp.task('bump', function() {
+    return gulp
+        .src(['./bower.json', './package.json'])
+        .pipe(plug.bump({
+            version: args.version
+        }))
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('watch', function() {
