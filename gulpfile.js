@@ -17,7 +17,7 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src('css/sass/main.scss')
+    return gulp.src('css/sass/base.scss')
         .pipe(plug.sass().on('error', plug.sass.logError))
         .pipe(plug.sass({
             outputStyle: 'compressed'

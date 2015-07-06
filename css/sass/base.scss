@@ -1,4 +1,9 @@
 /**
+ * Variables
+ */
+@import 'variables';
+
+/**
  * Fonts
  */
 @font-face{
@@ -52,10 +57,10 @@ body {
     z-index: 1;
 }
 .health progress::-moz-progress-bar {
-    background-image: linear-gradient(to bottom, #17d120, #66e860, #17d120);
+    background-image: $progress-gradient;
 }
 .health progress::-webkit-progress-value {
-    background-image: linear-gradient(to bottom, #17d120, #66e860, #17d120);
+    background-image: $progress-gradient;
 }
 .health progress[value] {
     background: #eee;
