@@ -17,13 +17,13 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src('css/sass/base.scss')
+    return gulp.src('css/base.scss')
         .pipe(plug.sass().on('error', plug.sass.logError))
         .pipe(plug.sass({
-            outputStyle: 'expanded'
+            outputStyle: 'compressed'
         }))
         .pipe(plug.rename('main.min.css'))
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('bump', function() {
