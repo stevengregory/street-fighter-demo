@@ -20,7 +20,7 @@ gulp.task('sass', function() {
     return gulp.src('css/sass/base.scss')
         .pipe(plug.sass().on('error', plug.sass.logError))
         .pipe(plug.sass({
-            outputStyle: 'compressed'
+            outputStyle: 'expanded'
         }))
         .pipe(plug.rename('main.min.css'))
         .pipe(gulp.dest('css'));
