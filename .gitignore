@@ -1,2 +1,6 @@
-node_modules
+# Ignore Bower & Node
 bower_components
+node_modules
+
+# Ignore minified CSS
+dist
