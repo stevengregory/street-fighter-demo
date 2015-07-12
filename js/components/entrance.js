@@ -1,13 +1,13 @@
 define([
-    'jquery',
     'character',
-    'actions',
+    'moves',
+    'jquery',
     'keyCode'
-], function($, c, a) {
+], function(c, m) {
     'use strict';
 
     var entrance = function() {
-        a.actions.entrance.execute();
+        m.moves.entrance.execute();
         c.character.addClass('stance');
     };
 

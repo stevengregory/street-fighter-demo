@@ -2,5 +2,5 @@
 bower_components
 node_modules
 
-# Ignore minified CSS
+# Ignore minified CSS & compiled JS
 dist

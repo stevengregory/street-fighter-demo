@@ -26,6 +26,12 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('babel', function() {
+    return gulp.src('js/components/action.js')
+        .pipe(plug.babel())
+        .pipe(gulp.dest('dist'));
+});
+
 gulp.task('bump', function() {
     return gulp.src(['./bower.json', './package.json'])
         .pipe(plug.bump({

@@ -1,7 +1,7 @@
 define([
-    'jquery',
-    'character'
-], function($, c) {
+    'character',
+    'jquery'
+], function(c) {
     'use strict';
 
     var quit = function() {

@@ -1,11 +1,12 @@
 require.config({
     deps: ['main'],
     paths: {
-        'actions': 'components/actions',
+        'action': '../dist/action',
         'character': 'components/character',
         'entrance': 'components/entrance',
         'jquery': '../bower_components/jquery/dist/jquery.min',
-        'keyCode': 'components/keyCode',
+        'keyCode': 'components/key-code',
+        'moves': 'components/moves',
         'quit': 'components/quit'
     }
 });
