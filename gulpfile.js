@@ -27,7 +27,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('babel', function() {
-    return gulp.src('js/components/action.js')
+    return gulp.src('js/modules/action.js')
         .pipe(plug.babel())
         .pipe(gulp.dest('dist'));
 });
