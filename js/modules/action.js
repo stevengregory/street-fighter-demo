@@ -28,7 +28,7 @@ define([
             }
             if (!c.character.hasClass(this.movement)) {
                 if (this.sound !== false) {
-                    var sound = new Audio('sounds/' + this.sound);
+                    let sound = new Audio('sounds/' + this.sound);
                     sound.oncanplay = function() {
                         sound.play();
                         self.animation();
@@ -42,4 +42,8 @@ define([
             }
         }
     }
+
+    return {
+        Action: Action
+    };
 });

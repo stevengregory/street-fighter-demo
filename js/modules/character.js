@@ -1,6 +1,6 @@
 define([
     'jquery'
-], function($) {
+], function() {
     'use strict';
 
     var character = $('.character span');
