@@ -28,7 +28,7 @@ define([
             }
             if (!c.character.hasClass(this.movement)) {
                 if (this.sound !== false) {
-                    let sound = new Audio('sounds/' + this.sound);
+                    let sound = new Audio('sounds/' + this.movement + '.mp3');
                     sound.oncanplay = function() {
                         sound.play();
                         self.animation();
