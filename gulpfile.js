@@ -1,7 +1,10 @@
 'use strict';
 
 var gulp = require('gulp'),
+    babelify = require('babelify'),
+    browserify = require('browserify'),
     args = require('yargs').argv,
+    source = require('vinyl-source-stream'),
     plug = require('gulp-load-plugins')();
 
 gulp.task('htmlhint', function() {
@@ -11,7 +14,7 @@ gulp.task('htmlhint', function() {
 });
 
 gulp.task('jshint', function() {
-    return gulp.src('js/**/*.js')
+    return gulp.src('js/*.js')
         .pipe(plug.jshint())
         .pipe(plug.jshint.reporter());
 });
@@ -26,9 +29,13 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('babel', function() {
-    return gulp.src('js/modules/action.js')
-        .pipe(plug.babel())
+gulp.task('bundle', function() {
+    browserify({
+        entries: 'js/entrance.js'
+    })
+        .transform(babelify)
+        .bundle()
+        .pipe(source('output.js'))
         .pipe(gulp.dest('dist'));
 });
 
@@ -42,7 +49,7 @@ gulp.task('bump', function() {
 
 gulp.task('watch', function() {
     gulp.watch('index.html', ['htmlhint']);
-    gulp.watch('js/**/*.js', ['jshint']);
+    gulp.watch('js/*.js', ['jshint']);
     gulp.watch('css/sass/*.scss', ['sass']);
 });
 
