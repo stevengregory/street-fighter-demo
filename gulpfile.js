@@ -8,35 +8,35 @@ var gulp = require('gulp'),
     plug = require('gulp-load-plugins')();
 
 gulp.task('htmlhint', function() {
-    return gulp.src('index.html')
+    return gulp.src('src/index.html')
         .pipe(plug.htmlhint())
         .pipe(plug.htmlhint.reporter());
 });
 
 gulp.task('jshint', function() {
-    return gulp.src('js/*.js')
+    return gulp.src('src/app/*.js')
         .pipe(plug.jshint())
         .pipe(plug.jshint.reporter());
 });
 
 gulp.task('sass', function() {
-    return gulp.src('css/base.scss')
+    return gulp.src('src/css/base.scss')
         .pipe(plug.sass().on('error', plug.sass.logError))
         .pipe(plug.sass({
             outputStyle: 'compressed'
         }))
         .pipe(plug.rename('main.min.css'))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('src/dist'));
 });
 
 gulp.task('bundle', function() {
     browserify({
-        entries: 'js/entrance.js'
+        entries: 'src/app/entrance.js'
     })
         .transform(babelify)
         .bundle()
-        .pipe(source('output.js'))
-        .pipe(gulp.dest('dist'));
+        .pipe(source('bundle.js'))
+        .pipe(gulp.dest('src/dist'));
 });
 
 gulp.task('bump', function() {
@@ -48,9 +48,9 @@ gulp.task('bump', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('index.html', ['htmlhint']);
-    gulp.watch('js/*.js', ['jshint', 'bundle']);
-    gulp.watch('css/sass/*.scss', ['sass']);
+    gulp.watch('src/index.html', ['htmlhint']);
+    gulp.watch('src/app/*.js', ['jshint', 'bundle']);
+    gulp.watch('src/css/sass/*.scss', ['sass']);
 });
 
 gulp.task('default', ['htmlhint', 'jshint', 'watch']);

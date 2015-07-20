@@ -1,5 +1,5 @@
 import { character as c } from './character';
-import $ from '../bower_components/jquery/dist/jquery.min.js';
+import $ from '../vendor/jquery/dist/jquery.min.js';
 
 var quit = function() {
     $('main').addClass('game-over');

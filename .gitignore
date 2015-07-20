@@ -1,6 +1,6 @@
 # Ignore Bower & Node
-bower_components
+src/vendor
 node_modules
 
 # Ignore minified CSS & compiled JS
-dist
+src/dist
