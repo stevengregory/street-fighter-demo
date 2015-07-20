@@ -49,7 +49,7 @@ gulp.task('bump', function() {
 
 gulp.task('watch', function() {
     gulp.watch('index.html', ['htmlhint']);
-    gulp.watch('js/*.js', ['jshint']);
+    gulp.watch('js/*.js', ['jshint', 'bundle']);
     gulp.watch('css/sass/*.scss', ['sass']);
 });
 
