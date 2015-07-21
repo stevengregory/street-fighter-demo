@@ -6,5 +6,3 @@ var entrance = function() {
     c.addClass('stance');
     m.entrance.execute();
 }();
-
-export { entrance };
