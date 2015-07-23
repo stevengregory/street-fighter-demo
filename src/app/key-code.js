@@ -1,11 +1,11 @@
-import { moves as m } from './moves';
+import { moves } from './moves';
 import $ from '../vendor/jquery/dist/jquery.min.js';
 
 var keyCode = function() {
     $(document).on('keyup', function(e) {
-        for (var move in m) {
-            if (m[move].key === e.keyCode) {
-                m[move].execute();
+        for (var m in moves) {
+            if (moves[m].key === e.keyCode) {
+                moves[m].execute();
             }
         }
     });

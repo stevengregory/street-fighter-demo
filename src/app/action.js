@@ -1,5 +1,4 @@
-import { character as c } from './character';
-import { quit as q } from './quit';
+import { character as c, quit } from './character';
 
 class Action {
     constructor(movement, key, step, sound) {
@@ -34,7 +33,7 @@ class Action {
             }
         }
         if (this.key === 81) {
-            q();
+            quit();
         }
     }
 }
