@@ -50,7 +50,7 @@ gulp.task('bump', function() {
 gulp.task('watch', function() {
     gulp.watch('src/index.html', ['htmlhint']);
     gulp.watch('src/app/*.js', ['jshint', 'bundle']);
-    gulp.watch('src/css/sass/*.scss', ['sass']);
+    gulp.watch('src/css/*.scss', ['sass']);
 });
 
 gulp.task('default', ['htmlhint', 'jshint', 'watch']);
