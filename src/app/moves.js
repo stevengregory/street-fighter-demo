@@ -1,5 +1,6 @@
 import { Action } from './action';
 
+// object that implements the action class with the command pattern
 var moves = {
     walk: new Action('walk', 39, 30, false),
     walkBackwards: new Action('walk-backwards', 37, -30, false),

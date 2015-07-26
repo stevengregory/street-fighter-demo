@@ -1,12 +1,22 @@
 import { character as c, quit } from './character';
 
+/**
+ * @class Action
+ */
 class Action {
+
+    /** @constructs Action */
     constructor(movement, key, step, sound) {
         this.movement = movement;
         this.key = key;
         this.step = step;
         this.sound = sound;
     }
+
+    /**
+     * @desc Add and removes character movement
+     * @method animation
+     */
     animation() {
         var self = this;
         c.addClass(self.movement);
@@ -14,6 +24,11 @@ class Action {
             c.removeClass(self.movement);
         });
     }
+
+    /**
+     * @desc Performs the character sound and movement
+     * @method execute
+     */
     execute() {
         var self = this;
         if (this.step !== false && !c.hasClass('entrance')) {
