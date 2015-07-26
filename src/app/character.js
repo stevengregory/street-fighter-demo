@@ -6,9 +6,12 @@ var character = $('.character span');
 // adds stance to character
 var stance = character.addClass('stance');
 
-// quits the game, removes character and stage
+/**
+ * @desc Quits the game, removes character and stage
+ * @function quit
+ */
 var quit = () => {
-    return $('main').addClass('game-over').children().hide();
+    $('main').addClass('game-over').children().hide();
 };
 
 export { character, stance, quit };

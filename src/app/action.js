@@ -5,7 +5,9 @@ import { character as c, quit } from './character';
  */
 class Action {
 
-    /** @constructs Action */
+    /** 
+     * @constructs Action
+     */
     constructor(movement, key, step, sound) {
         this.movement = movement;
         this.key = key;
