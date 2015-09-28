@@ -20,11 +20,10 @@ class Action {
      * @method animation
      */
     animation() {
-        var self = this;
-        c.addClass(self.movement);
+        c.addClass(this.movement);
         c.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
-            c.removeClass(self.movement);
-        });
+            c.removeClass(this.movement);
+        }.bind(this));
     }
 
     /**
@@ -32,7 +31,6 @@ class Action {
      * @method execute
      */
     execute() {
-        var self = this;
         if (this.step !== false && !c.hasClass('entrance')) {
             c.css({
                 marginLeft: '+=' + this.step
@@ -43,8 +41,8 @@ class Action {
                 let sound = new Audio('sounds/' + this.movement + '.mp3');
                 sound.oncanplay = function() {
                     sound.play();
-                    self.animation();
-                };
+                    this.animation();
+                }.bind(this);
             } else {
                 this.animation();
             }
