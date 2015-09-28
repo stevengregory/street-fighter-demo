@@ -38,7 +38,7 @@ class Action {
         }
         if (!c.hasClass(this.movement)) {
             if (this.sound !== false) {
-                let sound = new Audio('sounds/' + this.movement + '.mp3');
+                let sound = new Audio(`sounds/${this.movement}.mp3`);
                 sound.oncanplay = function() {
                     sound.play();
                     this.animation();
