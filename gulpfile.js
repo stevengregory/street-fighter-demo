@@ -3,6 +3,7 @@
 var gulp = require('gulp'),
     babelify = require('babelify'),
     browserify = require('browserify'),
+    fs = require('fs'),
     args = require('yargs').argv,
     source = require('vinyl-source-stream'),
     plug = require('gulp-load-plugins')();
@@ -30,13 +31,12 @@ gulp.task('sass', function() {
 });
 
 gulp.task('bundle', function() {
-    browserify({
-        entries: 'src/app/entrance.js'
-    })
-        .transform(babelify)
+    browserify('src/app/entrance.js')
+        .transform('babelify', {
+            presets: ['es2015']
+        })
         .bundle()
-        .pipe(source('bundle.js'))
-        .pipe(gulp.dest('src/dist'));
+        .pipe(fs.createWriteStream('src/dist/bundle.js'));
 });
 
 gulp.task('bump', function() {
