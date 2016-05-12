@@ -5,7 +5,7 @@ import { character as c, quit } from './character';
  */
 class Action {
 
-    /** 
+    /**
      * @constructs Action
      */
     constructor(movement, key, step, sound) {
@@ -21,9 +21,9 @@ class Action {
      */
     animation() {
         c.addClass(this.movement);
-        c.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
+        c.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', () => {
             c.removeClass(this.movement);
-        }.bind(this));
+        });
     }
 
     /**
@@ -39,10 +39,10 @@ class Action {
         if (!c.hasClass(this.movement)) {
             if (this.sound !== false) {
                 let sound = new Audio(`sounds/${this.movement}.mp3`);
-                sound.oncanplay = function() {
+                sound.oncanplay = () => {
                     sound.play();
                     this.animation();
-                }.bind(this);
+                }
             } else {
                 this.animation();
             }
