@@ -1,10 +1,6 @@
 import { Action } from './action';
 
-/**
- * @desc Implements the action class with the command pattern
- * @type {object} moves
- */
-var moves = {
+export var moves = {
     walk: new Action('walk', 39, 30, false),
     walkBackwards: new Action('walk-backwards', 37, -30, false),
     jab: new Action('jab', 74, false),
@@ -18,5 +14,3 @@ var moves = {
     fall: new Action('fall', 81, false),
     entrance: new Action('entrance', false, false, false)
 };
-
-export { moves };
