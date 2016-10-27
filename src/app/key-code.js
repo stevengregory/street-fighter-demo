@@ -1,5 +1,5 @@
 import { moves } from './moves';
-import $ from '../vendor/jquery/dist/jquery.min.js';
+import $ from 'jquery';
 
 export var keyCode = (function() {
     $(document).on('keyup', function(e) {

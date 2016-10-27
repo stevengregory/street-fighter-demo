@@ -1,4 +1,4 @@
-import $ from '../vendor/jquery/dist/jquery.min.js';
+import $ from 'jquery';
 
 export const character = $('.character span');
 
