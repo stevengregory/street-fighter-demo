@@ -1,3 +1,5 @@
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+
 module.exports = {
   context: __dirname + '/src/app',
   entry: './entrance.js',
@@ -25,5 +27,10 @@ module.exports = {
     alias: {
       jquery: 'jquery/src/jquery'
     }
-  }
+  },
+  plugins: [
+    new OpenBrowserPlugin({
+      url: 'http://localhost:8080'
+    })
+  ]
 };
