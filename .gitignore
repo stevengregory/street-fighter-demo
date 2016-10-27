@@ -1,5 +1,4 @@
-# Ignore Bower & Node
-src/vendor
+# Ignore Node
 node_modules
 
 # Ignore minified CSS & compiled JS

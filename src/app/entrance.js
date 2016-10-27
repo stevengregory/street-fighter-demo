@@ -3,5 +3,5 @@ import { moves } from './moves';
 import { keyCode } from './key-code';
 
 (() => {
-    moves.entrance.execute();
+  moves.entrance.execute();
 })();

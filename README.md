@@ -3,7 +3,15 @@ Street Fighter Demo
 
 ![](http://i.imgur.com/titqNDJ.png)
 
-A Street Fighter demo featuring the British boxer <a href="https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)" target="_blank">Dudley</a>. The demo was created using: ES2015 (ES6), jQuery, Gulp, Babelify and Sass.
+A Street Fighter demo featuring the British boxer <a href="https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)" target="_blank">Dudley</a>. The demo was created using: ES2015 (ES6), jQuery, Sass and webpack.
+
+## Running Local
+
+1. Clone this repo
+
+1. Run `npm i`
+
+1. Run `npm start` to kick off the webpack dev server and launch the app
 
 ## Keyboard Moves
 
