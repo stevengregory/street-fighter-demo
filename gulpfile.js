@@ -1,8 +1,6 @@
 'use strict';
 
 var gulp = require('gulp'),
-    babelify = require('babelify'),
-    browserify = require('browserify'),
     fs = require('fs'),
     args = require('yargs').argv,
     source = require('vinyl-source-stream'),
@@ -30,15 +28,6 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('src/dist'));
 });
 
-gulp.task('bundle', function() {
-    browserify('src/app/entrance.js')
-        .transform('babelify', {
-            presets: ['es2015']
-        })
-        .bundle()
-        .pipe(fs.createWriteStream('src/dist/bundle.js'));
-});
-
 gulp.task('bump', function() {
     return gulp.src(['./bower.json', './package.json'])
         .pipe(plug.bump({
@@ -49,7 +38,7 @@ gulp.task('bump', function() {
 
 gulp.task('watch', function() {
     gulp.watch('src/index.html', ['htmlhint']);
-    gulp.watch('src/app/*.js', ['jshint', 'bundle']);
+    gulp.watch('src/app/*.js', ['jshint']);
     gulp.watch('src/css/*.scss', ['sass']);
 });
 
