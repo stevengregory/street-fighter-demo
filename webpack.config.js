@@ -1,4 +1,4 @@
-var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
   context: __dirname + '/src/app',
