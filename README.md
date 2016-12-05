@@ -9,9 +9,9 @@ A Street Fighter demo featuring the British boxer <a href="https://en.wikipedia.
 
 1. Clone this repo
 
-1. Run `npm i`
+1. Run `yarn`
 
-1. Run `npm start` to kick off the webpack dev server and launch the app
+1. Run `yarn start` to build and launch the app
 
 ## Keyboard Moves
 
