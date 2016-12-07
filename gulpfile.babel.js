@@ -16,7 +16,7 @@ gulp.task('jshint', () => {
 });
 
 gulp.task('sass', () => {
-  return gulp.src('src/css/base.scss')
+  return gulp.src('src/sass/style.scss')
     .pipe(sass({
       outputStyle: 'compressed'
     }))
@@ -26,7 +26,7 @@ gulp.task('sass', () => {
 gulp.task('watch', () => {
   gulp.watch('src/index.html', ['htmlhint']);
   gulp.watch('src/app/*.js', ['jshint']);
-  gulp.watch('src/css/*.scss', ['sass']);
+  gulp.watch('src/sass/*.scss', ['sass']);
 });
 
-gulp.task('default', ['htmlhint', 'jshint', 'watch']);
+gulp.task('default', ['sass', 'watch']);

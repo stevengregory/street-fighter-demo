@@ -1,12 +1,4 @@
 /**
- * Fonts
- */
-@font-face {
-  font-family: "StreetFighter";
-  src: local("â˜¼"), url("../fonts/StreetFighter.woff") format('woff'), url("../fonts/StreetFighter.ttf") format('truetype')
-}
-
-/**
  * Base
  */
 body {
@@ -20,11 +12,11 @@ body {
     width: 575px;
     margin: 0 auto 25px auto;
   }
-  h1 {
-    font-family: 'StreetFighter';
-    font-size: 50px;
-    margin: 0;
-    text-align: center;
+  .logo {
+    background: url('../images/game/sf-logo.png') no-repeat;
+    height: 180px;
+    margin: 0 auto 25px auto;
+    width: 600px;
   }
 }
 

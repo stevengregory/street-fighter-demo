@@ -7,7 +7,7 @@
     "url": "https://github.com/stevengregory/street-fighter-demo.git"
   },
   "scripts": {
-    "start": "concurrently \"gulp sass\" \"webpack\" \"webpack-dev-server\""
+    "start": "concurrently \"gulp\" \"webpack\" \"webpack-dev-server\""
   },
   "license": "ISC",
   "devDependencies": {
