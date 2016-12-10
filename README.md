@@ -3,15 +3,17 @@ Street Fighter Demo
 
 ![](http://i.imgur.com/titqNDJ.png)
 
-A Street Fighter demo featuring the British boxer <a href="https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)" target="_blank">Dudley</a>. The demo was created using: ES2015 (ES6), jQuery, Sass and webpack.
+A Street Fighter III demo featuring the British boxer <a href="https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)" target="_blank">Dudley</a>. The demo was created using: ES2015 (ES6), jQuery, Sass and webpack.
 
-## Running Local
+## Running the Application
 
-1. Clone this repo
+1. Clone it `git clone https://github.com/stevengregory/street-fighter-demo.git sfd`
 
-1. Run `yarn`
+1. Get in `cd sfd`
 
-1. Run `yarn start` to build and launch the app
+1. Run `npm i` to install app dependencies
+
+1. Run `npm start` to build and launch the app
 
 ## Keyboard Moves
 
