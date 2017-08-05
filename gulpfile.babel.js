@@ -20,7 +20,7 @@ gulp.task('sass', () => {
     .pipe(sass({
       outputStyle: 'compressed'
     }))
-    .pipe(gulp.dest('src/dist'));
+    .pipe(gulp.dest('src/css'));
 });
 
 gulp.task('watch', () => {

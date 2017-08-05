@@ -1,25 +1,25 @@
-const OpenBrowserPlugin = require('open-browser-webpack-plugin');
-
 module.exports = {
   context: __dirname + '/src/app',
   entry: './entrance.js',
   output: {
-    path: __dirname + '/src/dist',
+    path: __dirname + '/src',
     filename: 'bundle.js'
   },
   devServer: {
-    colors: true,
     contentBase: './src',
     historyApiFallback: true,
     inline: true,
-    progress: true
+    open: true,
+    openPage: ''
   },
   module: {
-    loaders: [{
+    rules: [{
       test: /.js$/,
-      loader: 'babel-loader',
-      query: {
-        presets: ['es2015']
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['es2015']
+        }
       }
     }]
   },
@@ -27,10 +27,5 @@ module.exports = {
     alias: {
       jquery: 'jquery/src/jquery'
     }
-  },
-  plugins: [
-    new OpenBrowserPlugin({
-      url: 'http://localhost:8080'
-    })
-  ]
+  }
 };
