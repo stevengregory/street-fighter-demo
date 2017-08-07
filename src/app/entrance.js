@@ -1,7 +1,7 @@
-import { stance } from './character';
-import { moves } from './moves';
+import { Action } from './action';
 import { keyCode } from './key-code';
 
 (() => {
-  moves.entrance.execute();
+  const entrance = new Action('entrance', false, false, false);
+  entrance.execute();
 })();

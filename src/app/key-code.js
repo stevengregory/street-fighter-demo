@@ -3,10 +3,8 @@ import $ from 'jquery';
 
 export const keyCode = (() => {
   $(document).on('keyup', (e) => {
-    for (let m in moves) {
-      if (moves[m].key === e.keyCode) {
-        moves[m].execute();
-      }
-    }
+    const isMove = (move, key) => move.key === e.keyCode;
+    const getMove = moves => moves.filter(isMove);
+    getMove(moves)[0].execute();
   });
 })();
