@@ -9,14 +9,14 @@ export class Action {
     this.sound = sound;
   }
 
-  animation() {
+  doAnimation() {
     character.addClass(this.movement);
     character.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', () => {
       character.removeClass(this.movement);
     });
   }
 
-  execute() {
+  doMove() {
     if (this.step !== false && !character.hasClass('entrance')) {
       character.css({
         marginLeft: '+=' + this.step
@@ -27,14 +27,11 @@ export class Action {
         let sound = new Audio(`sounds/${this.movement}.mp3`);
         sound.oncanplay = () => {
           sound.play();
-          this.animation();
+          this.doAnimation();
         };
       } else {
-        this.animation();
+        this.doAnimation();
       }
-    }
-    if (this.key === 81) {
-      quit();
     }
   }
 }
