@@ -18,11 +18,9 @@
     "concurrently": "^3.5.0",
     "eslint": "^4.4.1",
     "gulp": "^3.9.1",
-    "gulp-htmlhint": "^0.3.1",
-    "gulp-jshint": "^2.0.4",
     "gulp-sass": "^3.1.0",
-    "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.6.1",
+    "webpack": "^3.5.2",
+    "webpack-dev-server": "^2.7.1",
     "yarn": "^0.27.5"
   },
   "dependencies": {
