@@ -30,7 +30,7 @@ export class Action {
           this.doAnimation();
         };
       } else {
-        this.doAnimation();
+          this.doAnimation();
       }
     }
   }
