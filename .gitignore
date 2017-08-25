@@ -1,6 +1,9 @@
-# Ignore Node
+# build
+dist
+
+# node
 node_modules
 
-# Ignore minified CSS & compiled JS
-src/css
-src/bundle.js
+# system files
+.DS_Store
+Thumbs.db
