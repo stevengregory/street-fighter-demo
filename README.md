@@ -1,15 +1,16 @@
-Street Fighter Demo
-====================
+[![Build Status](https://travis-ci.org/stevengregory/street-fighter-demo.svg?branch=master)](https://travis-ci.org/stevengregory/street-fighter-demo)
+
+# Street Fighter Demo
 
 ![](http://i.imgur.com/titqNDJ.png)
 
-A Street Fighter III demo featuring the British boxer <a href="https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)" target="_blank">Dudley</a>. The demo was created using: ES2015 (ES6), jQuery, Sass and webpack.
+A Street Fighter III demo featuring the British boxer <a href="https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)" target="_blank">Dudley</a>. The demo was crafted using: JavaScript, jQuery, Sass and webpack. Travis CI handles the continuous integration with ESLint.
 
 ## Running the Application
 
-1. Clone it `git clone https://github.com/stevengregory/street-fighter-demo.git sfd`
+1. Clone it `git clone https://github.com/stevengregory/street-fighter-demo.git`
 
-1. Get in `cd sfd`
+1. Get in `cd street-fighter-demo`
 
 1. Run `npm i` to install app dependencies
 
@@ -45,7 +46,7 @@ A Street Fighter III demo featuring the British boxer <a href="https://en.wikipe
       <td align="center">✓</td>
       <td align="center">✓</td>
       <td align="center">✓</td>
-      <td align="center">✘</td>
+      <td align="center">✓</td>
     </tr>
   </tbody>
 </table>
