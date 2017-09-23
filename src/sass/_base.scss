@@ -231,6 +231,33 @@ main .duck {
   }
 }
 
+/* Rest */
+main .rest {
+  -webkit-animation: 1.6s steps(20, end) 0s normal none 1 rest;
+  animation: 1.6s steps(20, end) 0s normal none 1 rest;
+  background-image: url('../images/sprites/rest.png');
+  height: 123px;
+  width: 102px;
+}
+
+@-webkit-keyframes rest {
+  from {
+    background-position: 0px 123px;
+  }
+  to {
+    background-position: -2040px 123px;
+  }
+}
+
+@keyframes rest {
+  from {
+    background-position: 0px 123px;
+  }
+  to {
+    background-position:  -2040px 123px;
+  }
+}
+
 /**
  * Fighter Attacks Module
  */

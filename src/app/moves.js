@@ -11,5 +11,6 @@ export const moves = [
   new Action('jump', 38, false, false),
   new Action('duck', 40, false, false),
   new Action('block', 66, false, false),
-  new Action('fall', 81, false)
+  new Action('fall', 81, false),
+  new Action('rest', 82, false, false)
 ];

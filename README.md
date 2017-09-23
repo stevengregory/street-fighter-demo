@@ -22,13 +22,13 @@ A Street Fighter III demo featuring the British boxer <a href="https://en.wikipe
 * Walk Backward `left`
 * Duck `down`
 * Jump `up`
+* Rest `r`
 * Block `b`
 * Jab `j`
 * Cross `c`
 * Hook `h`
 * Uppercut `u`
 * Jumping Uppercut `4`
-* Quit `q`
 
 ## Browser Support
 
