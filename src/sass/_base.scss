@@ -258,6 +258,33 @@ main .rest {
   }
 }
 
+/* Fall */
+main .fall {
+  -webkit-animation: 1.6s steps(23, end) 0s normal none 1 fall;
+  animation: 1.6s steps(23, end) 0s normal none 1 fall;
+  background-image: url('../images/sprites/fall.png');
+  height: 137px;
+  width: 200px;
+}
+
+@-webkit-keyframes fall {
+  from {
+    background-position: 0px 137px;
+  }
+  to {
+    background-position: -4600px 137px;
+  }
+}
+
+@keyframes fall {
+  from {
+    background-position: 0px 137px;
+  }
+  to {
+    background-position:  -4600px 137px;
+  }
+}
+
 /**
  * Fighter Attacks Module
  */
