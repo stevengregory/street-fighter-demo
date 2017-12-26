@@ -1,7 +1,6 @@
 import { character, quit } from './character';
 
 export class Action {
-
   constructor(movement, key, step, sound) {
     this.movement = movement;
     this.key = key;
@@ -11,9 +10,12 @@ export class Action {
 
   doAnimation() {
     character.addClass(this.movement);
-    character.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', () => {
-      character.removeClass(this.movement);
-    });
+    character.bind(
+      'webkitAnimationEnd oanimationend msAnimationEnd animationend',
+      () => {
+        character.removeClass(this.movement);
+      }
+    );
   }
 
   doMove() {

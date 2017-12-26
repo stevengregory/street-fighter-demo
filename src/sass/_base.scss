@@ -73,7 +73,8 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
   margin: -2px 0 0 20px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   text-transform: uppercase;
 }
 
@@ -254,7 +255,7 @@ main .rest {
     background-position: 0px 123px;
   }
   to {
-    background-position:  -2040px 123px;
+    background-position: -2040px 123px;
   }
 }
 
@@ -281,7 +282,7 @@ main .fall {
     background-position: 0px 137px;
   }
   to {
-    background-position:  -4600px 137px;
+    background-position: -4600px 137px;
   }
 }
 

@@ -4,7 +4,7 @@
 
 ![](http://i.imgur.com/titqNDJ.png)
 
-A Street Fighter III demo featuring the British boxer <a href="https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)" target="_blank">Dudley</a>. The demo was crafted using: JavaScript, jQuery, Sass and webpack. Travis CI handles the continuous integration with ESLint.
+A Street Fighter III demo featuring the British boxer [Dudley](https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)). The demo was crafted using: JavaScript, jQuery, Sass and webpack. Travis CI handles the continuous integration with ESLint.
 
 ## Running the Application
 
@@ -31,29 +31,8 @@ A Street Fighter III demo featuring the British boxer <a href="https://en.wikipe
 * Rest `r`
 * Fall `f`
 
-## Browser Support
-
-<table>
-  <tbody>
-    <tr>
-      <td><img src="http://img3.wikia.nocookie.net/__cb20120330024137/logopedia/images/d/d7/Google_Chrome_logo_2011.svg" height="40"></td>
-      <td><img src="http://th09.deviantart.net/fs71/200H/f/2013/185/e/b/firefox_2013_vector_icon_by_thegoldenbox-d6bxsye.png" height="40"></td>
-      <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Internet_Explorer_9_icon.svg/2000px-Internet_Explorer_9_icon.svg.png" height="40"></td>
-      <td><img src="http://upload.wikimedia.org/wikipedia/commons/d/d4/Opera_browser_logo_2013.png" height="40"></td>
-      <td><img src="http://media.idownloadblog.com/wp-content/uploads/2014/06/Safari-logo-OS-X-Yosemite.png" height="40"></td>
-    </tr>
-    <tr>
-      <td align="center">✓</td>
-      <td align="center">✓</td>
-      <td align="center">✓</td>
-      <td align="center">✓</td>
-      <td align="center">✓</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Demo
 
 Check it out!
 
-<a href="http://stevengregory.ninja/demos/street-fighter-demo/" target="_blank">Street Fighter Demo</a>
+[Street Fighter Demo](http://stevengregory.ninja/demos/street-fighter-demo/)
