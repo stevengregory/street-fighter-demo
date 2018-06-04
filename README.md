@@ -2,9 +2,9 @@
 
 # Street Fighter Demo
 
-![](http://i.imgur.com/titqNDJ.png)
-
 A Street Fighter III demo featuring the British boxer [Dudley](https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)). The demo was crafted using: JavaScript, jQuery, Sass and webpack. Travis CI handles the continuous integration with ESLint.
+
+![Street Fighter](http://i.imgur.com/titqNDJ.png)
 
 ## Running the Application
 
