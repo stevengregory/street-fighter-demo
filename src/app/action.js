@@ -1,4 +1,4 @@
-import { character, quit } from './character';
+import { character } from './character';
 
 export class Action {
   constructor(movement, key, step, sound) {
@@ -25,15 +25,15 @@ export class Action {
       });
     }
     if (!character.hasClass(this.movement)) {
-      if (this.sound !== false) {
-        let sound = new Audio(`sounds/${this.movement}.mp3`);
-        sound.oncanplay = () => {
-          sound.play();
-          this.doAnimation();
-        };
-      } else {
-        this.doAnimation();
-      }
+      this.sound !== false ? this.playSound() : this.doAnimation();
     }
+  }
+
+  playSound() {
+    let sound = new Audio(`sounds/${this.movement}.mp3`);
+    sound.oncanplay = () => {
+      sound.play();
+      this.doAnimation();
+    };
   }
 }
