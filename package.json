@@ -7,6 +7,7 @@
     "url": "https://github.com/stevengregory/street-fighter-demo.git"
   },
   "scripts": {
+    "prettier": "prettier --write 'src/app/*.js'",
     "start": "concurrently \"webpack\" \"webpack-dev-server\"",
     "lint": "eslint ."
   },
@@ -23,6 +24,7 @@
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.9.0",
+    "prettier": "^1.16.4",
     "sass-loader": "^7.0.2",
     "webpack": "^3.5.2",
     "webpack-dev-server": "^2.7.1",
