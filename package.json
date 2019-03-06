@@ -9,7 +9,7 @@
   "scripts": {
     "prettier": "prettier --write 'src/app/*.js'",
     "start": "concurrently \"webpack\" \"webpack-dev-server\"",
-    "lint": "eslint ."
+    "lint": "eslint src/."
   },
   "license": "ISC",
   "devDependencies": {
@@ -20,6 +20,10 @@
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
