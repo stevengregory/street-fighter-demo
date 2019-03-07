@@ -1,10 +1,10 @@
-import { moves } from './moves';
 import $ from 'jquery';
+import moves from './moves';
 
-export const keyCode = (() => {
+export default (function getKeyCode() {
   $(document).on('keyup', e => {
-    const isMove = (move, key) => move.key === e.keyCode;
-    const getMove = moves => moves.filter(isMove);
+    const isMove = move => move.key === e.keyCode;
+    const getMove = move => move.filter(isMove);
     getMove(moves).length ? getMove(moves)[0].doMove() : null;
   });
 })();

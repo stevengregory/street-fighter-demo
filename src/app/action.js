@@ -1,6 +1,6 @@
 import { character } from './character';
 
-export class Action {
+export default class Action {
   constructor(movement, key, step, sound) {
     this.movement = movement;
     this.key = key;
@@ -30,7 +30,7 @@ export class Action {
   }
 
   playSound() {
-    let sound = new Audio(`sounds/${this.movement}.mp3`);
+    const sound = new Audio(`sounds/${this.movement}.mp3`);
     sound.oncanplay = () => {
       sound.play();
       this.doAnimation();
