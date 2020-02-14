@@ -32,7 +32,7 @@
     "sass-loader": "^7.0.2",
     "webpack": "^3.5.2",
     "webpack-dev-server": "^2.7.1",
-    "yarn": "^1.17.3"
+    "yarn": "^1.22.0"
   },
   "dependencies": {
     "jquery": "^3.3.1"
