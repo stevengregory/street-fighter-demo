@@ -2,7 +2,7 @@
 
 # Street Fighter Demo
 
-A Street Fighter III demo featuring the British boxer [Dudley](https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)). The demo was crafted using: JavaScript, jQuery, Sass and webpack. Travis CI handles the continuous integration with ESLint.
+A Street Fighter III demo featuring the British boxer [Dudley](<https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)>). The demo was crafted using: JavaScript, jQuery, Sass and webpack. Travis CI handles the continuous integration with ESLint.
 
 ![Street Fighter](http://i.imgur.com/titqNDJ.png)
 
@@ -29,20 +29,20 @@ A Street Fighter III demo featuring the British boxer [Dudley](https://en.wikipe
 
 ## Keyboard Moves
 
-| Key | Move |
-| --- | ---- |
-| `b` | Block |
-| `c` | Cross |
-| `down arrow` | Duck |
-| `f` | Fall |
-| `h` | Hook |
-| `j` | Jab |
-| `left arrow` | Walk Backward |
-| `r` | Rest |
-| `right arrow` | Walk Forward |
-| `u` | Uppercut |
-| `up arrow` | Jump |
-| `4` | Jumping Uppercut |
+| Key           | Move             |
+| ------------- | ---------------- |
+| `b`           | Block            |
+| `c`           | Cross            |
+| `down arrow`  | Duck             |
+| `f`           | Fall             |
+| `h`           | Hook             |
+| `j`           | Jab              |
+| `left arrow`  | Walk Backward    |
+| `r`           | Rest             |
+| `right arrow` | Walk Forward     |
+| `u`           | Uppercut         |
+| `up arrow`    | Jump             |
+| `4`           | Jumping Uppercut |
 
 ## Demo
 
