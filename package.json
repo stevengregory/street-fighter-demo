@@ -7,34 +7,16 @@
     "url": "https://github.com/stevengregory/street-fighter-demo.git"
   },
   "scripts": {
-    "prettier": "prettier --write 'src/app/*.js'",
-    "start": "concurrently \"webpack\" \"webpack-dev-server\"",
-    "lint": "eslint src/."
+    "start": "vite --host"
   },
+  "type": "module",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-preset-es2017": "^6.24.1",
-    "concurrently": "^5.1.0",
-    "copy-webpack-plugin": "^4.5.1",
-    "css-loader": "^0.28.11",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.11",
-    "html-webpack-plugin": "^3.2.0",
-    "node-sass": "^4.9.0",
-    "prettier": "^2.0.4",
-    "sass-loader": "^7.0.2",
-    "webpack": "^3.5.2",
-    "webpack-dev-server": "^2.7.1",
-    "yarn": "^1.22.4"
-  },
-  "dependencies": {
-    "jquery": "^3.5.0"
+    "eslint": "^8.38.0",
+    "jquery": "^3.6.4",
+    "prettier": "^2.8.7",
+    "sass": "^1.61.0",
+    "vite": "^4.2.1",
+    "yarn": "^1.22.19"
   }
 }

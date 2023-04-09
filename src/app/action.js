@@ -10,7 +10,7 @@ export default class Action {
 
   doAnimation() {
     character.addClass(this.movement);
-    character.bind(
+    character.on(
       'webkitAnimationEnd oanimationend msAnimationEnd animationend',
       () => {
         character.removeClass(this.movement);
