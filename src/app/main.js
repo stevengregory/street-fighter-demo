@@ -1,7 +1,3 @@
-import Action from './action';
+import './start';
+import './entrance';
 import './key-code';
-import '../sass/style.scss';
-
-(() => {
-  return new Action('entrance', false, false, false).doMove();
-})();
