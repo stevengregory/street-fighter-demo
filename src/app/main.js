@@ -3,6 +3,5 @@ import './key-code';
 import '../sass/style.scss';
 
 (() => {
-  const entrance = new Action('entrance', false, false, false);
-  entrance.doMove();
+  return new Action('entrance', false, false, false).doMove();
 })();

@@ -1,7 +1,7 @@
 import Action from './action';
 
 export default (function getMoves() {
-  const moves = [
+  return [
     new Action('walk', 'ArrowRight', 30, false),
     new Action('walk-backwards', 'ArrowLeft', -30, false),
     new Action('jab', 'j', false),
@@ -15,5 +15,4 @@ export default (function getMoves() {
     new Action('fall', 'f', false),
     new Action('rest', 'r', false, false)
   ];
-  return moves;
 })();
