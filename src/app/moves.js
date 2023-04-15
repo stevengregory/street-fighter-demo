@@ -1,4 +1,4 @@
-import Action from './action';
+import { default as Action } from './action';
 
 export default (function getMoves() {
   return [
