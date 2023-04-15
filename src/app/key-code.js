@@ -1,4 +1,4 @@
-import moves from './moves';
+import { default as moves } from './moves';
 
 export default (function getMove() {
   onkeyup = (e) => {
