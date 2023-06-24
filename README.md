@@ -1,29 +1,33 @@
-# Street Fighter Demo
+# Street Fighter Demo (Featuring Dudley)
 
-A Street Fighter III demo featuring the British boxer [Dudley](<https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)>).
+Welcome! This interactive project brings a piece of the iconic Street Fighter game to life, spotlighting the character, [Dudley](<https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)>). Crafted using HTML, CSS, JavaScript, and jQuery, this demo immerses you in a virtual training ground where you can execute Dudley's variety of moves & specials straight from your web browser.
 
 ![Street Fighter](http://i.imgur.com/titqNDJ.png)
 
-## Getting Started
+## Installation
 
-1. Clone this repository
+Clone the repository & change directory:
 
-   ```bash
-   git clone https://github.com/stevengregory/street-fighter-demo.git
-   cd street-fighter-demo
-   ```
+```bash
+git clone https://github.com/stevengregory/street-fighter-demo.git
+cd street-fighter-demo
+```
 
-1. Install the npm packages
+Install the dependencies:
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+# or
+yarn
+```
 
-1. Run the app!
+## How to Run
 
-   ```bash
-   npm start
-   ```
+```bash
+npm start
+# or
+yarn start
+```
 
 ## Keyboard Moves
 
