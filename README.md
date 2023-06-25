@@ -4,7 +4,7 @@ Welcome! This interactive project brings a piece of the iconic Street Fighter ga
 
 ![Street Fighter](http://i.imgur.com/titqNDJ.png)
 
-## Installation
+## Getting Started
 
 Clone the repository & change directory:
 
@@ -12,6 +12,8 @@ Clone the repository & change directory:
 git clone https://github.com/stevengregory/street-fighter-demo.git
 cd street-fighter-demo
 ```
+
+## Install & Run
 
 Install the dependencies:
 
@@ -21,7 +23,7 @@ npm install
 yarn
 ```
 
-## How to Run
+Start the project:
 
 ```bash
 npm start
