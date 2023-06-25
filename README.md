@@ -33,17 +33,17 @@ yarn start
 
 ## Keyboard Moves
 
-| Key           | Move             |
-| ------------- | ---------------- |
-| `b`           | Block            |
-| `c`           | Cross            |
-| `down arrow`  | Duck             |
-| `f`           | Fall             |
-| `h`           | Hook             |
-| `j`           | Jab              |
-| `left arrow`  | Walk Backward    |
-| `r`           | Rest             |
-| `right arrow` | Walk Forward     |
-| `u`           | Uppercut         |
-| `up arrow`    | Jump             |
-| `1`           | Jumping Uppercut |
+| Move             | Key           |
+| ---------------- | ------------- |
+| Block            | `b`           |
+| Cross            | `c`           |
+| Duck             | `down arrow`  |
+| Fall             | `f`           |
+| Hook             | `h`           |
+| Jab              | `j`           |
+| Jump             | `up arrow`    |
+| Jumping Uppercut | `1`           |
+| Rest             | `r`           |
+| Uppercut         | `u`           |
+| Walk Backward    | `left arrow`  |
+| Walk Forward     | `right arrow` |
