@@ -7,7 +7,7 @@
     "url": "https://github.com/stevengregory/street-fighter-demo.git"
   },
   "scripts": {
-    "format:fix": "prettier --write .",
+    "format": "prettier --write .",
     "start": "vite --host"
   },
   "type": "module",
