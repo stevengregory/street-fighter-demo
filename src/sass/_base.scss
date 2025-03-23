@@ -1,3 +1,5 @@
+@use 'variables';
+
 /**
  * Base
  */
@@ -41,11 +43,11 @@ body {
 }
 
 .health progress::-moz-progress-bar {
-  background-image: $progress-gradient;
+  background-image: variables.$progress-gradient;
 }
 
 .health progress::-webkit-progress-value {
-  background-image: $progress-gradient;
+  background-image: variables.$progress-gradient;
 }
 
 .health progress[value] {
