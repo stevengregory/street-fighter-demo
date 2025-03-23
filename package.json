@@ -14,8 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "jquery": "^3.7.1",
-    "prettier": "^3.1.1",
-    "sass": "^1.69.5",
-    "vite": "^5.0.10"
+    "prettier": "^3.5.3",
+    "sass": "^1.86.0",
+    "vite": "^6.2.2"
   }
 }
