@@ -6,29 +6,21 @@ Welcome! This interactive project brings a piece of the iconic Street Fighter ga
 
 ## Getting Started
 
-Clone the repository & change directory:
-
 ```bash
 git clone https://github.com/stevengregory/street-fighter-demo.git
 cd street-fighter-demo
 ```
 
-## Install & Run
-
-Install the dependencies:
+## Installation
 
 ```bash
 npm install
-# or
-yarn
 ```
 
-Start the project:
+## Running
 
 ```bash
 npm start
-# or
-yarn start
 ```
 
 ## Keyboard Moves
