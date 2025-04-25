@@ -292,6 +292,33 @@ main .fall {
  * Fighter Attacks Module
  */
 
+ /* Corkscrew Blow */
+main .corkscrew-blow {
+  -webkit-animation: 1.6s steps(31, end) 0s normal none 1 corkscrew-blow;
+  animation: 1.6s steps(31, end) 0s normal none 1 corkscrew-blow;
+  background-image: url('../images/sprites/corkscrew-blow.png');
+  height: 125px;
+  width: 177px;
+}
+
+@-webkit-keyframes corkscrew-blow {
+  from {
+    background-position: 0px 125px;
+  }
+  to {
+    background-position: -5487px 125px;
+  }
+}
+
+@keyframes corkscrew-blow {
+  from {
+    background-position: 0px 125px;
+  }
+  to {
+    background-position: -5487px 125px;
+  }
+}
+
 /* Jab */
 main .jab {
   -webkit-animation: 0.4s steps(6, end) 0s normal none 1 jab;
@@ -373,33 +400,6 @@ main .hook {
   }
 }
 
-/* Uppercut */
-main .uppercut {
-  -webkit-animation: 0.9s steps(18, end) 0s normal none 1 uppercut;
-  animation: 0.9s steps(18, end) 0s normal none 1 uppercut;
-  background-image: url('../images/sprites/uppercut.png');
-  height: 138px;
-  width: 127px;
-}
-
-@-webkit-keyframes uppercut {
-  from {
-    background-position: 0px 138px;
-  }
-  to {
-    background-position: -2286px 138px;
-  }
-}
-
-@keyframes uppercut {
-  from {
-    background-position: 0px 138px;
-  }
-  to {
-    background-position: -2286px 138px;
-  }
-}
-
 /* Jet Uppercut */
 main .jet-uppercut {
   -webkit-animation: 1.7s steps(26, end) 0s normal none 1 jet-uppercut;
@@ -424,6 +424,33 @@ main .jet-uppercut {
   }
   to {
     background-position: -3952px 199px;
+  }
+}
+
+/* Uppercut */
+main .uppercut {
+  -webkit-animation: 0.9s steps(18, end) 0s normal none 1 uppercut;
+  animation: 0.9s steps(18, end) 0s normal none 1 uppercut;
+  background-image: url('../images/sprites/uppercut.png');
+  height: 138px;
+  width: 127px;
+}
+
+@-webkit-keyframes uppercut {
+  from {
+    background-position: 0px 138px;
+  }
+  to {
+    background-position: -2286px 138px;
+  }
+}
+
+@keyframes uppercut {
+  from {
+    background-position: 0px 138px;
+  }
+  to {
+    background-position: -2286px 138px;
   }
 }
 
