@@ -19,14 +19,9 @@ export default class Action {
   }
 
   doMove() {
-    const isAnimating = character.attr('class').split(' ').some(className =>
-      className !== 'stance' && className !== this.movement
-    );
-
-    if (isAnimating) {
+    if (this.isAnimating(this.movement)) {
       return;
     }
-
     if (this.step !== false && !character.hasClass('entrance')) {
       character.css({
         marginLeft: '+=' + this.step
@@ -35,6 +30,13 @@ export default class Action {
     if (!character.hasClass(this.movement)) {
       this.sound !== false ? this.playSound() : this.doAnimation();
     }
+  }
+
+  isAnimating(movement) {
+    return character
+      .attr('class')
+      .split(' ')
+      .some((className) => className !== 'stance' && className !== movement);
   }
 
   playSound() {
