@@ -28,13 +28,14 @@ npm start
 | Move             | Key           |
 | ---------------- | ------------- |
 | Block            | `b`           |
+| Corkscrew Blow   | `2`           |
 | Cross            | `c`           |
 | Duck             | `down arrow`  |
 | Fall             | `f`           |
 | Hook             | `h`           |
 | Jab              | `j`           |
-| Jump             | `up arrow`    |
 | Jet Uppercut     | `1`           |
+| Jump             | `up arrow`    |
 | Rest             | `r`           |
 | Uppercut         | `u`           |
 | Walk Backward    | `left arrow`  |
