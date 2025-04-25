@@ -8,7 +8,7 @@ export default (function getMoves() {
     new Action('cross', 'c', false),
     new Action('hook', 'h', false),
     new Action('uppercut', 'u', false),
-    new Action('jumping-uppercut', '1', false),
+    new Action('jet-uppercut', '1', false),
     new Action('jump', 'ArrowUp', false, false),
     new Action('duck', 'ArrowDown', false, false),
     new Action('block', 'b', false, false),

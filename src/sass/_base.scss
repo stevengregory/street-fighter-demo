@@ -400,16 +400,16 @@ main .uppercut {
   }
 }
 
-/* Jumping Uppercut */
-main .jumping-uppercut {
-  -webkit-animation: 1.7s steps(26, end) 0s normal none 1 jumping-uppercut;
-  animation: 1.7s steps(26, end) 0s normal none 1 jumping-uppercut;
-  background-image: url('../images/sprites/jumping-uppercut.png');
+/* Jet Uppercut */
+main .jet-uppercut {
+  -webkit-animation: 1.7s steps(26, end) 0s normal none 1 jet-uppercut;
+  animation: 1.7s steps(26, end) 0s normal none 1 jet-uppercut;
+  background-image: url('../images/sprites/jet-uppercut.png');
   height: 199px;
   width: 152px;
 }
 
-@-webkit-keyframes jumping-uppercut {
+@-webkit-keyframes jet-uppercut {
   from {
     background-position: 0px 199px;
   }
@@ -418,7 +418,7 @@ main .jumping-uppercut {
   }
 }
 
-@keyframes jumping-uppercut {
+@keyframes jet-uppercut {
   from {
     background-position: 0px 199px;
   }

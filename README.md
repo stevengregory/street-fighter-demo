@@ -34,7 +34,7 @@ npm start
 | Hook             | `h`           |
 | Jab              | `j`           |
 | Jump             | `up arrow`    |
-| Jumping Uppercut | `1`           |
+| Jet Uppercut     | `1`           |
 | Rest             | `r`           |
 | Uppercut         | `u`           |
 | Walk Backward    | `left arrow`  |
