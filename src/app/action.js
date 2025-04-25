@@ -19,7 +19,7 @@ export default class Action {
   }
 
   doMove() {
-    if (this.isAnimating(this.movement)) {
+    if (this.isAnimating()) {
       return;
     }
     if (this.step !== false) {
@@ -36,14 +36,14 @@ export default class Action {
     return ['walk', 'walk-backwards'];
   }
 
-  isAnimating(movement) {
+  isAnimating() {
     return character
       .attr('class')
       .split(' ')
       .some(
         (className) =>
           className !== 'stance' &&
-          className !== movement &&
+          className !== this.movement &&
           !this.getWalkingMoves().includes(className)
       );
   }
