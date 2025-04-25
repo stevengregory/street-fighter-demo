@@ -32,11 +32,20 @@ export default class Action {
     }
   }
 
+  getWalkingMoves() {
+    return ['walk', 'walk-backwards'];
+  }
+
   isAnimating(movement) {
     return character
       .attr('class')
       .split(' ')
-      .some((className) => className !== 'stance' && className !== movement);
+      .some(
+        (className) =>
+          className !== 'stance' &&
+          className !== movement &&
+          !this.getWalkingMoves().includes(className)
+      );
   }
 
   playSound() {
