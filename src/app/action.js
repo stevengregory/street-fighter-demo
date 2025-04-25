@@ -19,6 +19,14 @@ export default class Action {
   }
 
   doMove() {
+    const isAnimating = character.attr('class').split(' ').some(className =>
+      className !== 'stance' && className !== this.movement
+    );
+
+    if (isAnimating) {
+      return;
+    }
+
     if (this.step !== false && !character.hasClass('entrance')) {
       character.css({
         marginLeft: '+=' + this.step
