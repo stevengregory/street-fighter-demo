@@ -30,6 +30,7 @@ npm start
 | Block            | `b`           |
 | Corkscrew Blow   | `2`           |
 | Cross            | `c`           |
+| Dart Shot        | `d`           |
 | Duck             | `down arrow`  |
 | Fall             | `f`           |
 | Hook             | `h`           |

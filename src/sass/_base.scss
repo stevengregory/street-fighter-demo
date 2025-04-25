@@ -373,6 +373,33 @@ main .cross {
   }
 }
 
+/* Dart Shot */
+main .dart-shot {
+  -webkit-animation: 0.6s steps(16, end) 0s normal none 1 dart-shot;
+  animation: 0.6s steps(16, end) 0s normal none 1 dart-shot;
+  background: url('../images/sprites/dart-shot.png');
+  height: 116px;
+  width: 143px;
+}
+
+@-webkit-keyframes dart-shot {
+  from {
+    background-position: 0px 116px;
+  }
+  to {
+    background-position: -2288px 116px;
+  }
+}
+
+@keyframes dart-shot {
+  from {
+    background-position: 0px 116px;
+  }
+  to {
+    background-position: -2288px 116px;
+  }
+}
+
 /* Hook */
 main .hook {
   -webkit-animation: 0.4s steps(13, end) 0s normal none 1 hook;
