@@ -22,7 +22,7 @@ export default class Action {
     if (this.isAnimating(this.movement)) {
       return;
     }
-    if (this.step !== false && !character.hasClass('entrance')) {
+    if (this.step !== false) {
       character.css({
         marginLeft: '+=' + this.step
       });
