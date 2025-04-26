@@ -1,5 +1,6 @@
 import { character } from './character';
 import { ActionParams } from '../types/action';
+import { SoundManager } from './sound-manager';
 
 export default class Action {
   constructor(
@@ -50,10 +51,7 @@ export default class Action {
   }
 
   private playSound(): void {
-    const sound = new Audio(`sounds/${this.movement}.mp3`);
-    sound.oncanplay = () => {
-      sound.play();
-      this.doAnimation();
-    };
+    SoundManager.play(this.movement);
+    this.doAnimation();
   }
 }
