@@ -1,0 +1,32 @@
+export type MoveKey =
+  | 'ArrowLeft'
+  | 'ArrowRight'
+  | 'ArrowUp'
+  | 'ArrowDown'
+  | 'b'
+  | 'c'
+  | 'd'
+  | 'h'
+  | 'j'
+  | 'r'
+  | 'u'
+  | '1'
+  | '2'
+  | 'f';
+
+export type MoveName =
+  | 'block'
+  | 'corkscrew-blow'
+  | 'cross'
+  | 'dart-shot'
+  | 'duck'
+  | 'fall'
+  | 'hook'
+  | 'jab'
+  | 'jet-uppercut'
+  | 'jump'
+  | 'rest'
+  | 'uppercut'
+  | 'walk'
+  | 'walk-backwards'
+  | 'entrance';

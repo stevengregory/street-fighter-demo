@@ -1,6 +1,8 @@
+import { MoveKey, MoveName } from './move';
+
 export interface ActionParams {
-  movement: string;
-  key: string;
+  movement: MoveName;
+  key: MoveKey;
   step: number | false;
   sound: boolean;
 }
