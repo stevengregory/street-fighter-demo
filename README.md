@@ -1,6 +1,6 @@
 # Street Fighter Demo (Featuring Dudley)
 
-Welcome! This interactive project brings a piece of the iconic Street Fighter game to life, spotlighting the character, [Dudley](<https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)>). Crafted using HTML, CSS, JavaScript, and jQuery, this demo immerses you in a virtual training ground where you can execute Dudley's variety of moves & specials straight from your web browser.
+A lightweight browser-based demo inspired by Street Fighter III: 3rd Strike, featuring [Dudley](<https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)>) as the sole playable character, built with TypeScript and classic DOM manipulation.
 
 ![Street Fighter](http://i.imgur.com/titqNDJ.png)
 
