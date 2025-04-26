@@ -6,7 +6,7 @@ export default class Action {
     public movement: ActionParams['movement'],
     public key: ActionParams['key'],
     public step: ActionParams['step'],
-    public sound: ActionParams['sound']
+    public sound: ActionParams['sound'] = true
   ) {}
 
   private doAnimation(): void {
