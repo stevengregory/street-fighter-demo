@@ -1,6 +1,6 @@
 import '../sass/style.scss';
 
-document.querySelector('#app').innerHTML = `
+document.querySelector('#app')!.innerHTML = `
   <div class="logo"></div>
   <main role="main">
     <div class="health">
