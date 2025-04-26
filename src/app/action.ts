@@ -8,7 +8,7 @@ export default class Action {
     this.sound = sound;
   }
 
-  doAnimation() {
+  private doAnimation() {
     character.addClass(this.movement);
     character.on(
       'webkitAnimationEnd oanimationend msAnimationEnd animationend',
@@ -18,7 +18,7 @@ export default class Action {
     );
   }
 
-  doMove() {
+  public doMove() {
     if (this.isAnimating()) {
       return;
     }
@@ -32,11 +32,11 @@ export default class Action {
     }
   }
 
-  getWalkingMoves() {
+  private getWalkingMoves() {
     return ['walk', 'walk-backwards'];
   }
 
-  isAnimating() {
+  private isAnimating() {
     return character
       .attr('class')
       .split(' ')
@@ -48,7 +48,7 @@ export default class Action {
       );
   }
 
-  playSound() {
+  private playSound() {
     const sound = new Audio(`sounds/${this.movement}.mp3`);
     sound.oncanplay = () => {
       sound.play();
