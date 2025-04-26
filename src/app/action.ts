@@ -1,14 +1,20 @@
 import { character } from './character';
+import { ActionParams } from '../types/action';
 
 export default class Action {
-  constructor(movement, key, step, sound) {
+  private movement: ActionParams['movement'];
+  private key: ActionParams['key'];
+  private step: ActionParams['step'];
+  private sound: ActionParams['sound'];
+
+  constructor({ movement, key, step, sound }: ActionParams) {
     this.movement = movement;
     this.key = key;
     this.step = step;
     this.sound = sound;
   }
 
-  private doAnimation() {
+  private doAnimation(): void {
     character.addClass(this.movement);
     character.on(
       'webkitAnimationEnd oanimationend msAnimationEnd animationend',
@@ -18,7 +24,7 @@ export default class Action {
     );
   }
 
-  public doMove() {
+  public doMove(): void {
     if (this.isAnimating()) {
       return;
     }
@@ -32,11 +38,11 @@ export default class Action {
     }
   }
 
-  private getWalkingMoves() {
+  private getWalkingMoves(): string[] {
     return ['walk', 'walk-backwards'];
   }
 
-  private isAnimating() {
+  private isAnimating(): boolean {
     return character
       .attr('class')
       .split(' ')
@@ -48,7 +54,7 @@ export default class Action {
       );
   }
 
-  private playSound() {
+  private playSound(): void {
     const sound = new Audio(`sounds/${this.movement}.mp3`);
     sound.oncanplay = () => {
       sound.play();
