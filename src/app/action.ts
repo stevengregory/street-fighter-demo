@@ -2,17 +2,12 @@ import { character } from './character';
 import { ActionParams } from '../types/action';
 
 export default class Action {
-  private movement: ActionParams['movement'];
-  private key: ActionParams['key'];
-  private step: ActionParams['step'];
-  private sound: ActionParams['sound'];
-
-  constructor({ movement, key, step, sound }: ActionParams) {
-    this.movement = movement;
-    this.key = key;
-    this.step = step;
-    this.sound = sound;
-  }
+  constructor(
+    public movement: ActionParams['movement'],
+    public key: ActionParams['key'],
+    public step: ActionParams['step'],
+    public sound: ActionParams['sound']
+  ) {}
 
   private doAnimation(): void {
     character.addClass(this.movement);
@@ -43,11 +38,11 @@ export default class Action {
   }
 
   private isAnimating(): boolean {
-    return character
-      .attr('class')
+    const classes = character.attr('class') ?? '';
+    return classes
       .split(' ')
       .some(
-        (className) =>
+        (className: string) =>
           className !== 'stance' &&
           className !== this.movement &&
           !this.getWalkingMoves().includes(className)

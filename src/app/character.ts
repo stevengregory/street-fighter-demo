@@ -1,4 +1,4 @@
 import $ from 'jquery';
 
-export const character = $('.character span');
-export const stance = character.addClass('stance');
+export const character: JQuery<HTMLElement> = $('.character span');
+export const stance: JQuery<HTMLElement> = character.addClass('stance');
