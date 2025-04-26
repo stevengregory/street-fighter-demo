@@ -1,3 +1,5 @@
+import { Config } from './config';
+
 export class SoundManager {
   private static musicAudio: HTMLAudioElement | null = null;
 
@@ -12,7 +14,7 @@ export class SoundManager {
     }
     const music = new Audio(`sounds/${trackName}.mp3`);
     music.loop = true;
-    music.volume = 0.15;
+    music.volume = Config.musicVolume;
     this.musicAudio = music;
     music.play();
   }
