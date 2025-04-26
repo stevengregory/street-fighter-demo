@@ -1,6 +1,6 @@
 import { default as Action } from './action';
 
-export default (function getMoves(): Action[] {
+export default (function getMoves() {
   return [
     new Action('block', 'b', false, false),
     new Action('corkscrew-blow', '2', false),
