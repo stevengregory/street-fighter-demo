@@ -12,7 +12,8 @@ export type MoveKey =
   | 'u'
   | '1'
   | '2'
-  | 'f';
+  | 'f'
+  | '';
 
 export type MoveName =
   | 'block'
