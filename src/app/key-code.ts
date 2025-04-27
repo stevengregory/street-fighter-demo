@@ -1,4 +1,4 @@
-import { default as moves } from './moves';
+import { moves } from './moves';
 import { ActionParams } from '../types/action';
 
 export default (function getMove() {
