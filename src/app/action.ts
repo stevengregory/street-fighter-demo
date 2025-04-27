@@ -29,7 +29,6 @@ export default class Action {
     if (this.isAnimating()) {
       return;
     }
-
     this.updatePosture();
     if (this.step !== false) {
       character.css({
@@ -47,16 +46,14 @@ export default class Action {
   }
 
   private isAnimating(): boolean {
-    const classes = character.attr('class') ?? '';
-    return classes
-      .split(' ')
-      .some(
-        (className: string) =>
-          className !== 'jump' &&
-          className !== 'stance' &&
-          className !== this.movement &&
-          !this.getWalkingMoves().includes(className)
-      );
+    const classes = character.attr('class')?.split(' ') ?? [];
+    const allowedClasses = new Set([
+      'jump',
+      'stance',
+      this.movement,
+      ...this.getWalkingMoves()
+    ]);
+    return classes.some((className) => !allowedClasses.has(className));
   }
 
   private playSound(): void {

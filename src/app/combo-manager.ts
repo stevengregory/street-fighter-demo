@@ -1,21 +1,26 @@
 import { GameState } from './game-state';
 import { moves } from './moves';
-
-let lastKeyTime = 0;
+import { MoveConfig } from '../types/move-config';
 
 export class ComboManager {
-  static onMoveKey(key: string): void {
-    const now = Date.now();
-    const move = ComboManager.findMoveByKeyAndPosture(key);
-    move?.doMove();
-    lastKeyTime = now;
+  static onMoveKey(key: string, pressedKeys: Set<string>): void {
+    const move = moves.find((move: MoveConfig) => move.key === key);
+    if (move && this.isMoveAllowed(move, pressedKeys)) {
+      move.doMove();
+    }
   }
 
-  static findMoveByKeyAndPosture(key: string) {
-    const posture = GameState.playerPosture;
+  static requiresPosture(move: MoveConfig): boolean {
+    return move.posture !== undefined;
+  }
 
-    return moves.find(
-      (m) => m.key === key && (m.posture === undefined || m.posture === posture)
-    );
+  static isMoveAllowed(move: MoveConfig, pressedKeys: Set<string>): boolean {
+    if (!this.requiresPosture(move)) {
+      return true;
+    }
+    if (move.posture === 'jumping') {
+      return pressedKeys.has('ArrowUp');
+    }
+    return move.posture === GameState.playerPosture;
   }
 }

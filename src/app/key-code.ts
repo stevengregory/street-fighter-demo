@@ -1,25 +1,19 @@
 import { ComboManager } from './combo-manager';
 
+const pressedKeys = new Set<string>();
+
 export default (function getMove() {
   onkeydown = (e) => {
-    if (
-      e.key === 'ArrowUp' ||
-      e.key === 'ArrowDown' ||
-      e.key === 'ArrowLeft' ||
-      e.key === 'ArrowRight'
-    ) {
-      ComboManager.onMoveKey(e.key);
+    pressedKeys.add(e.key);
+    if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+      ComboManager.onMoveKey(e.key, pressedKeys);
     }
   };
 
   onkeyup = (e) => {
-    if (
-      e.key !== 'ArrowUp' &&
-      e.key !== 'ArrowDown' &&
-      e.key !== 'ArrowLeft' &&
-      e.key !== 'ArrowRight'
-    ) {
-      ComboManager.onMoveKey(e.key);
+    pressedKeys.delete(e.key);
+    if (!['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+      ComboManager.onMoveKey(e.key, pressedKeys);
     }
   };
 })();
