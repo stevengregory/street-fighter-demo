@@ -25,6 +25,7 @@ export default class Action {
     if (this.isAnimating()) {
       return;
     }
+    this.updatePosture();
     if (this.step !== false) {
       character.css({
         marginLeft: '+=' + this.step
@@ -55,5 +56,15 @@ export default class Action {
   private playSound(): void {
     SoundManager.play(this.movement);
     this.doAnimation();
+  }
+
+  private updatePosture(): void {
+    if (this.movement === 'duck') {
+      GameState.setPosture('crouching');
+    } else if (this.movement === 'jump') {
+      GameState.setPosture('jumping');
+    } else if (this.getWalkingMoves().includes(this.movement)) {
+      GameState.setPosture('standing');
+    }
   }
 }
