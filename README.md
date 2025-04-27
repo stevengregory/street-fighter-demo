@@ -4,40 +4,52 @@ A lightweight browser-based demo inspired by Street Fighter III: 3rd Strike, fea
 
 ![Street Fighter](http://i.imgur.com/titqNDJ.png)
 
-## Getting Started
+## 🚀 Getting Started
 
 ```bash
 git clone https://github.com/stevengregory/street-fighter-demo.git
 cd street-fighter-demo
 ```
 
-## Installation
+## 📦 Installation
 
 ```bash
 npm install
 ```
 
-## Running
+## 🏃 Running
 
 ```bash
 npm start
 ```
 
-## Keyboard Moves
+## 🎮 Keyboard Moves
 
-| Move             | Key           |
-| ---------------- | ------------- |
-| Block            | `b`           |
-| Corkscrew Blow   | `2`           |
-| Cross            | `c`           |
-| Dart Shot        | `d`           |
-| Duck             | `down arrow`  |
-| Fall             | `f`           |
-| Hook             | `h`           |
-| Jab              | `j`           |
-| Jet Uppercut     | `1`           |
-| Jump             | `up arrow`    |
-| Rest             | `r`           |
-| Uppercut         | `u`           |
-| Walk Backward    | `left arrow`  |
-| Walk Forward     | `right arrow` |
+### 🥊 Basic Attacks
+
+| Move             | Key | Notes             |
+| ---------------- | --- | ----------------- |
+| **Slipping Jab** | `j` | Quick forward jab |
+| **Cross Punch**  | `c` | Straight punch    |
+| **Hook Punch**   | `h` | Swinging punch    |
+| **Uppercut**     | `u` | Rising punch      |
+| **Dart Shot**    | `d` | Overhead attack   |
+
+### 💥 Special Moves
+
+| Move               | Key | Notes           |
+| ------------------ | --- | --------------- |
+| **Jet Upper**      | `1` | Rising uppercut |
+| **Corkscrew Blow** | `2` | Super Art III   |
+
+### 🕹️ Movement & Defense
+
+| Action            | Key           | Notes                 |
+| ----------------- | ------------- | --------------------- |
+| **Walk Forward**  | `right arrow` | Move forward          |
+| **Walk Backward** | `left arrow`  | Move backward         |
+| **Jump**          | `up arrow`    | Standard jump         |
+| **Crouch**        | `down arrow`  | Defensive stance      |
+| **Block**         | `b`           | Defensive action      |
+| **Fall**          | `f`           | Trigger fall backward |
+| **Rest**          | `r`           | Exhausted pose        |
