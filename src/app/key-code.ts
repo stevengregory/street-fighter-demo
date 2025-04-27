@@ -1,9 +1,9 @@
+import Action from './action';
 import { moves } from './moves';
-import { ActionParams } from '../types/action';
 
 export default (function getMove() {
   onkeyup = (e) => {
-    const isMove = (move: ActionParams) => move.key === e.key;
+    const isMove = (move: Action) => move.key === e.key;
     const move = moves.find(isMove);
     return move && move.doMove();
   };
