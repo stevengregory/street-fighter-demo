@@ -11,6 +11,7 @@ export const moveConfigs: MoveConfig[] = [
   { movement: 'jab', key: 'j', step: false, sound: true },
   { movement: 'jet-uppercut', key: '1', step: false, sound: true },
   { movement: 'jump', key: 'ArrowUp', step: false, sound: false },
+  { movement: 'jumping-elbow', key: 'e', step: false, sound: true, posture: 'jumping' },
   { movement: 'rest', key: 'r', step: false, sound: false },
   { movement: 'uppercut', key: 'u', step: false, sound: true },
   { movement: 'walk', key: 'ArrowRight', step: 30, sound: false },

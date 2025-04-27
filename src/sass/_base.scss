@@ -75,7 +75,10 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
   margin: -2px 0 0 20px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
     1px 1px 0 #000;
   text-transform: uppercase;
 }
@@ -292,7 +295,7 @@ main .fall {
  * Fighter Attacks Module
  */
 
- /* Corkscrew Blow */
+/* Corkscrew Blow */
 main .corkscrew-blow {
   -webkit-animation: 1.6s steps(31, end) 0s normal none 1 corkscrew-blow;
   animation: 1.6s steps(31, end) 0s normal none 1 corkscrew-blow;
@@ -451,6 +454,33 @@ main .jet-uppercut {
   }
   to {
     background-position: -3952px 199px;
+  }
+}
+
+/* Jumping Elbow */
+main .jumping-elbow {
+  -webkit-animation: 0.6s steps(30, end) 0s normal none 1 jumping-elbow;
+  animation: 0.6s steps(30, end) 0s normal none 1 jumping-elbow;
+  background-image: url('../images/sprites/jumping-elbow.png');
+  height: 166px;
+  width: 141px;
+}
+
+@-webkit-keyframes jumping-elbow {
+  from {
+    background-position: 0px 166px;
+  }
+  to {
+    background-position: -4230px 166px;
+  }
+}
+
+@keyframes jumping-elbow {
+  from {
+    background-position: 0px 166px;
+  }
+  to {
+    background-position: -4230px 166px;
   }
 }
 

@@ -1,10 +1,25 @@
-import Action from './action';
-import { moves } from './moves';
+import { ComboManager } from './combo-manager';
 
 export default (function getMove() {
+  onkeydown = (e) => {
+    if (
+      e.key === 'ArrowUp' ||
+      e.key === 'ArrowDown' ||
+      e.key === 'ArrowLeft' ||
+      e.key === 'ArrowRight'
+    ) {
+      ComboManager.onMoveKey(e.key);
+    }
+  };
+
   onkeyup = (e) => {
-    const isMove = (move: Action) => move.key === e.key;
-    const move = moves.find(isMove);
-    return move && move.doMove();
+    if (
+      e.key !== 'ArrowUp' &&
+      e.key !== 'ArrowDown' &&
+      e.key !== 'ArrowLeft' &&
+      e.key !== 'ArrowRight'
+    ) {
+      ComboManager.onMoveKey(e.key);
+    }
   };
 })();

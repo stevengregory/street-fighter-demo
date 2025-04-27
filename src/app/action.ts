@@ -8,7 +8,8 @@ export default class Action {
     public movement: MoveConfig['movement'],
     public key: MoveConfig['key'],
     public step: MoveConfig['step'],
-    public sound: MoveConfig['sound'] = true
+    public sound: MoveConfig['sound'] = true,
+    public posture?: MoveConfig['posture']
   ) {}
 
   private doAnimation(): void {
@@ -17,6 +18,9 @@ export default class Action {
       'webkitAnimationEnd oanimationend msAnimationEnd animationend',
       () => {
         character.removeClass(this.movement);
+        if (GameState.playerPosture === 'jumping') {
+          GameState.setPosture('standing');
+        }
       }
     );
   }
@@ -25,6 +29,7 @@ export default class Action {
     if (this.isAnimating()) {
       return;
     }
+
     this.updatePosture();
     if (this.step !== false) {
       character.css({
@@ -47,6 +52,7 @@ export default class Action {
       .split(' ')
       .some(
         (className: string) =>
+          className !== 'jump' &&
           className !== 'stance' &&
           className !== this.movement &&
           !this.getWalkingMoves().includes(className)
