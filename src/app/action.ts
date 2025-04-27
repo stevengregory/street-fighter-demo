@@ -1,5 +1,6 @@
 import { character } from './character';
 import { ActionParams } from '../types/action';
+import { GameState } from './game-state';
 import { SoundManager } from './sound-manager';
 
 export default class Action {
@@ -28,6 +29,7 @@ export default class Action {
       character.css({
         marginLeft: '+=' + this.step
       });
+      GameState.movePlayer(this.step);
     }
     if (!character.hasClass(this.movement)) {
       this.sound !== false ? this.playSound() : this.doAnimation();
