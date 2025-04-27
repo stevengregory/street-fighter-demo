@@ -1,14 +1,14 @@
 import { character } from './character';
-import { ActionParams } from '../types/action';
+import { MoveConfig } from '../types/move-config';
 import { GameState } from './game-state';
 import { SoundManager } from './sound-manager';
 
 export default class Action {
   constructor(
-    public movement: ActionParams['movement'],
-    public key: ActionParams['key'],
-    public step: ActionParams['step'],
-    public sound: ActionParams['sound'] = true
+    public movement: MoveConfig['movement'],
+    public key: MoveConfig['key'],
+    public step: MoveConfig['step'],
+    public sound: MoveConfig['sound'] = true
   ) {}
 
   private doAnimation(): void {
