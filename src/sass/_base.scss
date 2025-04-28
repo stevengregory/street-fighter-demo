@@ -486,8 +486,8 @@ main .jumping-elbow {
 
 /* Uppercut */
 main .uppercut {
-  -webkit-animation: 0.9s steps(18, end) 0s normal none 1 uppercut;
-  animation: 0.9s steps(18, end) 0s normal none 1 uppercut;
+  -webkit-animation: 0.5s steps(18, end) 0s normal none 1 uppercut;
+  animation: 0.5s steps(18, end) 0s normal none 1 uppercut;
   background-image: url('../images/sprites/uppercut.png');
   height: 138px;
   width: 127px;
