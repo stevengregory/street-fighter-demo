@@ -39,7 +39,13 @@ export const moveConfigs: MoveConfig[] = [
   },
   { movement: 'fall', key: 'f', step: false, sound: true, requiredKeys: false },
   { movement: 'hook', key: 'h', step: false, sound: true, requiredKeys: false },
-  { movement: 'jab', key: 'j', step: false, sound: true, requiredKeys: false },
+  {
+    movement: 'jab',
+    key: 'j',
+    step: false,
+    sound: true,
+    requiredKeys: false
+  },
   {
     movement: 'jet-uppercut',
     key: 'u',

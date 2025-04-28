@@ -324,8 +324,8 @@ main .corkscrew-blow {
 
 /* Jab */
 main .jab {
-  -webkit-animation: 0.4s steps(6, end) 0s normal none 1 jab;
-  animation: 0.4s steps(6, end) 0s normal none 1 jab;
+  -webkit-animation: 0.2s steps(6, end) 0s normal none 1 jab;
+  animation: 0.2s steps(6, end) 0s normal none 1 jab;
   background-image: url('../images/sprites/jab.png');
   height: 113px;
   width: 141px;
@@ -351,8 +351,8 @@ main .jab {
 
 /* Cross */
 main .cross {
-  -webkit-animation: 0.4s steps(8, end) 0s normal none 1 cross;
-  animation: 0.4s steps(8, end) 0s normal none 1 cross;
+  -webkit-animation: 0.3s steps(8, end) 0s normal none 1 cross;
+  animation: 0.3s steps(8, end) 0s normal none 1 cross;
   background: url('../images/sprites/cross.png');
   height: 113px;
   width: 155px;

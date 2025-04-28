@@ -29,8 +29,8 @@ npm start
 
 | Move              | Key     | Notes                |
 | ----------------- | ------- | -------------------- |
-| **Slipping Jab**  | `j`     | Quick forward jab    |
-| **Cross Punch**   | `c`     | Straight punch       |
+| **Light Punch**   | `j`     | Quick forward punch  |
+| **Medium Punch**  | `c`     | Straight punch       |
 | **Hook Punch**    | `h`     | Swinging punch       |
 | **Uppercut**      | `u`     | Rising punch         |
 | **Dart Shot**     | `→ + d` | Overhead attack      |
