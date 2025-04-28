@@ -19,7 +19,7 @@ export default class Action {
       'webkitAnimationEnd oanimationend msAnimationEnd animationend',
       () => {
         character.removeClass(this.movement);
-        if (GameState.playerPosture === 'jumping') {
+        if (GameState.playerPosture !== 'standing' && this.posture) {
           GameState.setPosture('standing');
         }
       }
@@ -42,6 +42,10 @@ export default class Action {
     }
   }
 
+  private getBasicMoves(): string[] {
+    return ['jump', 'duck', 'stance'];
+  }
+
   private getWalkingMoves(): string[] {
     return ['walk', 'walk-backwards'];
   }
@@ -49,9 +53,8 @@ export default class Action {
   private isAnimating(): boolean {
     const classes = character.attr('class')?.split(' ') ?? [];
     const allowedClasses = new Set([
-      'jump',
-      'stance',
       this.movement,
+      ...this.getBasicMoves(),
       ...this.getWalkingMoves()
     ]);
     return classes.some((className) => !allowedClasses.has(className));
@@ -63,7 +66,9 @@ export default class Action {
   }
 
   private updatePosture(): void {
-    if (this.movement === 'duck') {
+    if (this.posture) {
+      GameState.setPosture(this.posture);
+    } else if (this.movement === 'duck') {
       GameState.setPosture('crouching');
     } else if (this.movement === 'jump') {
       GameState.setPosture('jumping');

@@ -30,6 +30,7 @@ export type MoveName =
   | 'jet-uppercut'
   | 'jump'
   | 'jumping-elbow'
+  | 'launcher'
   | 'rest'
   | 'uppercut'
   | 'walk'

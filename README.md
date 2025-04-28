@@ -31,8 +31,9 @@ npm start
 | ----------------- | ------- | -------------------- |
 | **Light Punch**   | `j`     | Quick forward punch  |
 | **Medium Punch**  | `c`     | Straight punch       |
-| **Heavy Punch**   | `h`     | Powerful hook punch  |
-| **Heavy Punch**   | `u`     | Rising uppercut      |
+| **Heavy Punch**   | `h`     | Hook punch           |
+| **Heavy Punch**   | `u`     | Uppercut             |
+| **Launcher**      | `↓ + k` | Shovel uppercut      |
 | **Dart Shot**     | `→ + d` | Overhead attack      |
 | **Jumping Elbow** | `↑ + e` | Mid-air elbow strike |
 

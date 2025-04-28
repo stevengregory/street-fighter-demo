@@ -63,6 +63,14 @@ export const moveConfigs: MoveConfig[] = [
     posture: 'jumping',
     requiredKeys: ['ArrowUp']
   },
+  {
+    movement: 'launcher',
+    key: 'k',
+    step: false,
+    sound: true,
+    posture: 'crouching',
+    requiredKeys: ['ArrowDown']
+  },
   { movement: 'rest', key: 'r', step: false, sound: false },
   {
     movement: 'uppercut',

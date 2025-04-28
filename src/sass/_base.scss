@@ -484,6 +484,33 @@ main .jumping-elbow {
   }
 }
 
+/* Launcher */
+main .launcher {
+  -webkit-animation: 0.8s steps(23, end) 0s normal none 1 launcher;
+  animation: 0.8s steps(23, end) 0s normal none 1 launcher;
+  background-image: url('../images/sprites/launcher.png');
+  height: 133px;
+  width: 182px;
+}
+
+@-webkit-keyframes launcher {
+  from {
+    background-position: 0px 133px;
+  }
+  to {
+    background-position: -4186px 133px;
+  }
+}
+
+@keyframes launcher {
+  from {
+    background-position: 0px 133px;
+  }
+  to {
+    background-position: -4186px 133px;
+  }
+}
+
 /* Uppercut */
 main .uppercut {
   -webkit-animation: 0.5s steps(18, end) 0s normal none 1 uppercut;
