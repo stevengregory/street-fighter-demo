@@ -33,7 +33,7 @@ npm start
 | **Cross Punch**   | `c`     | Straight punch       |
 | **Hook Punch**    | `h`     | Swinging punch       |
 | **Uppercut**      | `u`     | Rising punch         |
-| **Dart Shot**     | `d`     | Overhead attack      |
+| **Dart Shot**     | `→ + d` | Overhead attack      |
 | **Jumping Elbow** | `↑ + e` | Mid-air elbow strike |
 
 ### 💥 Special Moves

@@ -8,6 +8,7 @@ export const moves = moveConfigs.map(
       config.key,
       config.step,
       config.sound,
-      config.posture
+      config.posture,
+      config.requiredKeys
     )
 );

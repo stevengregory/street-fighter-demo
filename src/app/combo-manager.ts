@@ -15,11 +15,11 @@ export class ComboManager {
   }
 
   static isMoveAllowed(move: MoveConfig, pressedKeys: Set<string>): boolean {
+    if (move.requiredKeys?.length) {
+      return move.requiredKeys.every((key) => pressedKeys.has(key));
+    }
     if (!this.requiresPosture(move)) {
       return true;
-    }
-    if (move.posture === 'jumping') {
-      return pressedKeys.has('ArrowUp');
     }
     return move.posture === GameState.playerPosture;
   }

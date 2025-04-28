@@ -9,7 +9,8 @@ export default class Action {
     public key: MoveConfig['key'],
     public step: MoveConfig['step'],
     public sound: MoveConfig['sound'] = true,
-    public posture?: MoveConfig['posture']
+    public posture?: MoveConfig['posture'],
+    public requiredKeys?: MoveConfig['requiredKeys']
   ) {}
 
   private doAnimation(): void {
