@@ -27,14 +27,14 @@ npm start
 
 ### 🥊 Basic Attacks
 
-| Move              | Key       | Notes                |
-| ----------------- | --------- | -------------------- |
-| **Slipping Jab**  | `j`       | Quick forward jab    |
-| **Cross Punch**   | `c`       | Straight punch       |
-| **Hook Punch**    | `h`       | Swinging punch       |
-| **Uppercut**      | `u`       | Rising punch         |
-| **Dart Shot**     | `d`       | Overhead attack      |
-| **Jumping Elbow** | `↑` + `e` | Mid-air elbow strike |
+| Move              | Key     | Notes                |
+| ----------------- | ------- | -------------------- |
+| **Slipping Jab**  | `j`     | Quick forward jab    |
+| **Cross Punch**   | `c`     | Straight punch       |
+| **Hook Punch**    | `h`     | Swinging punch       |
+| **Uppercut**      | `u`     | Rising punch         |
+| **Dart Shot**     | `d`     | Overhead attack      |
+| **Jumping Elbow** | `↑ + e` | Mid-air elbow strike |
 
 ### 💥 Special Moves
 
@@ -45,12 +45,12 @@ npm start
 
 ### 🕹️ Movement & Defense
 
-| Action            | Key           | Notes                 |
-| ----------------- | ------------- | --------------------- |
-| **Walk Forward**  | `right arrow` | Move forward          |
-| **Walk Backward** | `left arrow`  | Move backward         |
-| **Jump**          | `up arrow`    | Standard jump         |
-| **Crouch**        | `down arrow`  | Defensive stance      |
-| **Block**         | `b`           | Defensive action      |
-| **Fall**          | `f`           | Trigger fall backward |
-| **Rest**          | `r`           | Exhausted pose        |
+| Action        | Key | Notes                 |
+| ------------- | --- | --------------------- |
+| Walk Forward  | `→` | Move forward          |
+| Walk Backward | `←` | Move backward         |
+| Jump          | `↑` | Standard jump         |
+| Crouch        | `↓` | Defensive stance      |
+| Block         | `b` | Defensive action      |
+| Fall          | `f` | Trigger fall backward |
+| Rest          | `r` | Exhausted pose        |
