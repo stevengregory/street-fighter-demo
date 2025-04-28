@@ -7,5 +7,6 @@ export interface MoveConfig {
   step: number | false;
   sound: boolean;
   posture?: PlayerPosture;
-  requiredKeys?: MoveKey[];
+  requiredKeys?: MoveKey[] | false;
+  isSpecialMove?: boolean;
 }

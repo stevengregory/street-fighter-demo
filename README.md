@@ -38,10 +38,10 @@ npm start
 
 ### 💥 Special Moves
 
-| Move               | Key | Notes           |
-| ------------------ | --- | --------------- |
-| **Jet Upper**      | `1` | Rising uppercut |
-| **Corkscrew Blow** | `2` | Super Art III   |
+| Move               | Key         | Notes           |
+| ------------------ | ----------- | --------------- |
+| **Jet Upper**      | `↓ + → + u` | Rising uppercut |
+| **Corkscrew Blow** | `↓ + ← + k` | Super Art III   |
 
 ### 🕹️ Movement & Defense
 
