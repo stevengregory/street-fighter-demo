@@ -6,7 +6,8 @@ export const moveConfigs: MoveConfig[] = [
     key: 'b',
     step: false,
     sound: false,
-    requiredKeys: false
+    requiredKeys: false,
+    isSpecialMove: false
   },
   {
     movement: 'corkscrew-blow',
@@ -21,30 +22,48 @@ export const moveConfigs: MoveConfig[] = [
     key: 'c',
     step: false,
     sound: true,
-    requiredKeys: false
+    requiredKeys: false,
+    isSpecialMove: false
   },
   {
     movement: 'dart-shot',
     key: 'd',
     step: false,
     sound: true,
-    requiredKeys: ['ArrowRight']
+    requiredKeys: ['ArrowRight'],
+    isSpecialMove: false
   },
   {
     movement: 'duck',
     key: 'ArrowDown',
     step: false,
     sound: false,
-    requiredKeys: false
+    requiredKeys: false,
+    isSpecialMove: false
   },
-  { movement: 'fall', key: 'f', step: false, sound: true, requiredKeys: false },
-  { movement: 'hook', key: 'h', step: false, sound: true, requiredKeys: false },
+  {
+    movement: 'fall',
+    key: 'f',
+    step: false,
+    sound: true,
+    requiredKeys: false,
+    isSpecialMove: false
+  },
+  {
+    movement: 'hook',
+    key: 'h',
+    step: false,
+    sound: true,
+    requiredKeys: false,
+    isSpecialMove: false
+  },
   {
     movement: 'jab',
     key: 'j',
     step: false,
     sound: true,
-    requiredKeys: false
+    requiredKeys: false,
+    isSpecialMove: false
   },
   {
     movement: 'jet-uppercut',
@@ -54,14 +73,22 @@ export const moveConfigs: MoveConfig[] = [
     requiredKeys: ['ArrowDown', 'ArrowRight'],
     isSpecialMove: true
   },
-  { movement: 'jump', key: 'ArrowUp', step: false, sound: false },
+  {
+    movement: 'jump',
+    key: 'ArrowUp',
+    step: false,
+    sound: false,
+    requiredKeys: false,
+    isSpecialMove: false
+  },
   {
     movement: 'jumping-elbow',
     key: 'e',
     step: false,
     sound: true,
     posture: 'jumping',
-    requiredKeys: ['ArrowUp']
+    requiredKeys: ['ArrowUp'],
+    isSpecialMove: false
   },
   {
     movement: 'launcher',
@@ -69,17 +96,47 @@ export const moveConfigs: MoveConfig[] = [
     step: false,
     sound: true,
     posture: 'crouching',
-    requiredKeys: ['ArrowDown']
+    requiredKeys: ['ArrowDown'],
+    isSpecialMove: false
   },
-  { movement: 'rest', key: 'r', step: false, sound: false },
+  {
+    movement: 'rest',
+    key: 'r',
+    step: false,
+    sound: false,
+    requiredKeys: false,
+    isSpecialMove: false
+  },
   {
     movement: 'uppercut',
     key: 'u',
     step: false,
     sound: true,
-    requiredKeys: false
+    requiredKeys: false,
+    isSpecialMove: false
   },
-  { movement: 'walk', key: 'ArrowRight', step: 30, sound: false },
-  { movement: 'walk-backwards', key: 'ArrowLeft', step: -30, sound: false },
-  { movement: 'entrance', key: '', step: false, sound: false }
+  {
+    movement: 'walk',
+    key: 'ArrowRight',
+    step: 30,
+    sound: false,
+    requiredKeys: false,
+    isSpecialMove: false
+  },
+  {
+    movement: 'walk-backwards',
+    key: 'ArrowLeft',
+    step: -30,
+    sound: false,
+    requiredKeys: false,
+    isSpecialMove: false
+  },
+  {
+    movement: 'entrance',
+    key: '',
+    step: false,
+    sound: false,
+    requiredKeys: false,
+    isSpecialMove: false
+  }
 ];
