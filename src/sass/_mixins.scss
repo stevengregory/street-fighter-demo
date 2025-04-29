@@ -1,0 +1,6 @@
+@mixin spriteAnimation($duration, $steps, $name, $repeat: 1) {
+  -webkit-animation: #{$duration} steps(#{$steps}, end) 0s normal none
+    #{$repeat} #{$name};
+  animation: #{$duration} steps(#{$steps}, end) 0s normal none #{$repeat}
+    #{$name};
+}
