@@ -27,22 +27,22 @@ npm start
 
 ### 🥊 Basic Attacks
 
-| Move              | Key     | Notes                |
-| ----------------- | ------- | -------------------- |
-| **Light Punch**   | `j`     | Quick forward punch  |
-| **Medium Punch**  | `c`     | Straight punch       |
-| **Heavy Punch**   | `h`     | Hook punch           |
-| **Heavy Punch**   | `u`     | Uppercut             |
-| **Launcher**      | `↓ + k` | Shovel uppercut      |
-| **Dart Shot**     | `→ + d` | Overhead attack      |
-| **Jumping Elbow** | `↑ + e` | Mid-air elbow strike |
+| Move              | Key   | Notes                |
+| ----------------- | ----- | -------------------- |
+| **Light Punch**   | `j`   | Quick forward punch  |
+| **Medium Punch**  | `c`   | Straight punch       |
+| **Heavy Punch**   | `h`   | Hook punch           |
+| **Uppercut**      | `u`   | Rising uppercut      |
+| **Launcher**      | `↓ k` | Shovel uppercut      |
+| **Dart Shot**     | `→ d` | Overhead attack      |
+| **Jumping Elbow** | `↑ e` | Mid-air elbow strike |
 
 ### 💥 Special Moves
 
-| Move               | Key         | Notes           |
-| ------------------ | ----------- | --------------- |
-| **Jet Upper**      | `↓ + → + u` | Rising uppercut |
-| **Corkscrew Blow** | `↓ + ← + k` | Super Art III   |
+| Move               | Key     | Notes           |
+| ------------------ | ------- | --------------- |
+| **Jet Upper**      | `↓ → u` | Rising uppercut |
+| **Corkscrew Blow** | `↓ ← k` | Super Art III   |
 
 ### 🕹️ Movement & Defense
 
