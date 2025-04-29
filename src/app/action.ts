@@ -32,9 +32,7 @@ export default class Action {
     }
     this.updatePosture();
     if (this.step !== false) {
-      character.css({
-        marginLeft: '+=' + this.step
-      });
+      this.moveCharacter(this.step);
       GameState.movePlayer(this.step);
     }
     if (!character.hasClass(this.movement)) {
@@ -46,18 +44,28 @@ export default class Action {
     return ['jump', 'duck', 'stance'];
   }
 
+  private getCurrentClasses(): string[] {
+    return character.attr('class')?.split(' ') ?? [];
+  }
+
   private getWalkingMoves(): string[] {
     return ['walk', 'walk-backwards'];
   }
 
   private isAnimating(): boolean {
-    const classes = character.attr('class')?.split(' ') ?? [];
+    const classes = this.getCurrentClasses();
     const allowedClasses = new Set([
       this.movement,
       ...this.getBasicMoves(),
       ...this.getWalkingMoves()
     ]);
     return classes.some((className) => !allowedClasses.has(className));
+  }
+
+  private moveCharacter(step: number): void {
+    character.css({
+      marginLeft: '+=' + step
+    });
   }
 
   private playSound(): void {
