@@ -1,4 +1,5 @@
 import { MoveConfig } from '../types/move-config';
+import { Posture } from '../types/posture';
 
 export const moveConfigs: MoveConfig[] = [
   {
@@ -86,7 +87,7 @@ export const moveConfigs: MoveConfig[] = [
     key: 'e',
     step: false,
     sound: true,
-    posture: 'jumping',
+    posture: Posture.Jumping,
     requiredKeys: ['ArrowUp'],
     isSpecialMove: false
   },
@@ -95,7 +96,7 @@ export const moveConfigs: MoveConfig[] = [
     key: 'k',
     step: false,
     sound: true,
-    posture: 'crouching',
+    posture: Posture.Crouching,
     requiredKeys: ['ArrowDown'],
     isSpecialMove: false
   },

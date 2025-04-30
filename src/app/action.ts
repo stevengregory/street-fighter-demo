@@ -1,6 +1,8 @@
 import { character } from './character';
-import { MoveConfig } from '../types/move-config';
 import { GameState } from './game-state';
+import { getPosture } from './posture';
+import { Posture } from '../types/posture';
+import { MoveConfig } from '../types/move-config';
 import { SoundManager } from './sound-manager';
 
 export default class Action {
@@ -19,8 +21,8 @@ export default class Action {
       'webkitAnimationEnd oanimationend msAnimationEnd animationend',
       () => {
         character.removeClass(this.movement);
-        if (GameState.playerPosture !== 'standing' && this.posture) {
-          GameState.setPosture('standing');
+        if (GameState.playerPosture !== Posture.Standing && this.posture) {
+          GameState.setPosture(Posture.Standing);
         }
       }
     );
@@ -74,14 +76,9 @@ export default class Action {
   }
 
   private updatePosture(): void {
-    if (this.posture) {
-      GameState.setPosture(this.posture);
-    } else if (this.movement === 'duck') {
-      GameState.setPosture('crouching');
-    } else if (this.movement === 'jump') {
-      GameState.setPosture('jumping');
-    } else if (this.getWalkingMoves().includes(this.movement)) {
-      GameState.setPosture('standing');
+    const posture = getPosture(this.movement);
+    if (posture) {
+      GameState.setPosture(posture);
     }
   }
 }

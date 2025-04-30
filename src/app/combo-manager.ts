@@ -21,7 +21,6 @@ export class ComboManager {
     if (move.requiredKeys === false) {
       return pressedKeys.has(move.key);
     }
-
     if (move.requiredKeys?.length) {
       const hasRequiredKeys = move.requiredKeys.every((key) =>
         pressedKeys.has(key)
@@ -29,16 +28,13 @@ export class ComboManager {
       const hasDirectionalInput = move.requiredKeys.some((key) =>
         key.startsWith('Arrow')
       );
-
       if (hasDirectionalInput) {
         return hasRequiredKeys;
       }
     }
-
     if (!this.requiresPosture(move)) {
       return true;
     }
-
     return move.posture === GameState.playerPosture;
   }
 }

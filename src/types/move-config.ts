@@ -1,12 +1,12 @@
 import { MoveName, MoveKey } from '../types/move';
-import { PlayerPosture } from './posture';
+import { Posture } from '../types/posture';
 
 export interface MoveConfig {
   movement: MoveName;
   key: MoveKey;
   step: number | false;
   sound: boolean;
-  posture?: PlayerPosture;
+  posture?: Posture;
   requiredKeys?: MoveKey[] | false;
   isSpecialMove?: boolean;
 }

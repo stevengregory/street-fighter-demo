@@ -1,1 +1,5 @@
-export type PlayerPosture = 'standing' | 'crouching' | 'jumping';
+export enum Posture {
+  Standing = 'standing',
+  Crouching = 'crouching',
+  Jumping = 'jumping'
+}
