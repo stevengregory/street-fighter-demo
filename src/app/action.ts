@@ -1,8 +1,8 @@
-import { character } from './character';
 import { GameState } from './game-state';
+import { getPlayer } from './player';
 import { getPosture } from './posture';
-import { Posture } from '../types/posture';
 import { MoveConfig } from '../types/move-config';
+import { Posture } from '../types/posture';
 import { SoundManager } from './sound-manager';
 
 export default class Action {
@@ -16,16 +16,19 @@ export default class Action {
   ) {}
 
   private doAnimation(): void {
-    character.addClass(this.movement);
-    character.on(
-      'webkitAnimationEnd oanimationend msAnimationEnd animationend',
-      () => {
-        character.removeClass(this.movement);
-        if (GameState.playerPosture !== Posture.Standing && this.posture) {
-          GameState.setPosture(Posture.Standing);
-        }
-      }
-    );
+    this.withPlayer((player) => {
+      player.classList.add(this.movement);
+      player.addEventListener(
+        'animationend',
+        () => {
+          player.classList.remove(this.movement);
+          if (GameState.playerPosture !== Posture.Standing && this.posture) {
+            GameState.setPosture(Posture.Standing);
+          }
+        },
+        { once: true }
+      );
+    });
   }
 
   public doMove(): void {
@@ -37,9 +40,15 @@ export default class Action {
       this.moveCharacter(this.step);
       GameState.movePlayer(this.step);
     }
-    if (!character.hasClass(this.movement)) {
-      this.sound !== false ? this.playSound() : this.doAnimation();
-    }
+    this.withPlayer((player) => {
+      if (!player.classList.contains(this.movement)) {
+        if (this.sound !== false) {
+          this.playSound();
+        } else {
+          this.doAnimation();
+        }
+      }
+    });
   }
 
   private getBasicMoves(): string[] {
@@ -47,7 +56,8 @@ export default class Action {
   }
 
   private getCurrentClasses(): string[] {
-    return character.attr('class')?.split(' ') ?? [];
+    const player = getPlayer();
+    return player?.className.split(' ') ?? [];
   }
 
   private getWalkingMoves(): string[] {
@@ -65,8 +75,9 @@ export default class Action {
   }
 
   private moveCharacter(step: number): void {
-    character.css({
-      marginLeft: '+=' + step
+    this.withPlayer((player) => {
+      const current = parseFloat(getComputedStyle(player).marginLeft || '0');
+      player.style.marginLeft = `${current + step}px`;
     });
   }
 
@@ -79,6 +90,13 @@ export default class Action {
     const posture = getPosture(this.movement);
     if (posture) {
       GameState.setPosture(posture);
+    }
+  }
+
+  private withPlayer(callback: (el: HTMLElement) => void): void {
+    const player = getPlayer();
+    if (player) {
+      callback(player);
     }
   }
 }

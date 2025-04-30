@@ -13,7 +13,7 @@
   "type": "module",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.7.1",
+    "lit": "^3.3.0",
     "sass": "^1.86.3",
     "vite": "^6.3.0"
   },

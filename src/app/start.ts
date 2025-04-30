@@ -1,15 +1,10 @@
 import '../sass/style.scss';
+import '../components/sf-stage.ts';
+import { setInitialStance } from './player.ts';
 
-document.querySelector('#app')!.innerHTML = `
-  <div class="logo"></div>
-  <main role="main">
-    <div class="health">
-      <progress max="100" value="100"></progress>
-      <span class="player-icon"></span>
-      <p>dudley</p>
-    </div>
-    <div class="character">
-      <span></span>
-    </div>
-  </main>
-`;
+document.querySelector('#app')!.innerHTML = `<sf-stage></sf-stage>`;
+customElements.whenDefined('sf-stage').then(() => {
+  requestAnimationFrame(() => {
+    setInitialStance();
+  });
+});

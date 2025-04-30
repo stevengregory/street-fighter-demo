@@ -7,7 +7,6 @@ export default (function getMove() {
     pressedKeys.add(e.key);
     ComboManager.onMoveKey(e.key, pressedKeys);
   };
-
   onkeyup = (e) => {
     pressedKeys.delete(e.key);
   };
