@@ -15,9 +15,7 @@ export class SFStage extends LitElement {
           <span class="player-icon"></span>
           <p>dudley</p>
         </div>
-        <div class="character">
-          <span></span>
-        </div>
+        <sf-player></sf-player>
       </main>
     `;
   }

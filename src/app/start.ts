@@ -1,6 +1,7 @@
 import '../sass/style.scss';
-import '../components/sf-stage.ts';
-import { setInitialStance } from './player.ts';
+import '../components/sf-player';
+import '../components/sf-stage';
+import { setInitialStance } from './player';
 
 document.querySelector('#app')!.innerHTML = `<sf-stage></sf-stage>`;
 customElements.whenDefined('sf-stage').then(() => {

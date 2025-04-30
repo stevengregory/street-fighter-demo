@@ -1,5 +1,8 @@
 export function getPlayer(): HTMLElement | null {
-  return document.querySelector('.character span');
+  return (
+    document.querySelector('sf-player')?.querySelector('.character span') ??
+    null
+  );
 }
 
 export function setInitialStance(): void {
