@@ -6,7 +6,7 @@ body {
   margin: 25px auto;
   width: 960px;
   main {
-    background: url('../images/stages/honda.png') no-repeat;
+    background: url('../assets/stages/honda.png') no-repeat;
     height: 224px;
     overflow: hidden;
     width: 575px;
@@ -25,7 +25,7 @@ body {
     }
   }
   .logo {
-    background: url('../images/game/sf-logo.png') no-repeat;
+    background: url('../assets/game/sf-logo.png') no-repeat;
     height: 180px;
     margin: 0 auto 25px auto;
     width: 600px;
@@ -33,7 +33,7 @@ body {
 }
 
 .health {
-  background: url('../images/character/health.png') no-repeat;
+  background: url('../assets/character/health.png') no-repeat;
   position: absolute;
   margin: 10px 0 0 10px;
   width: 225px;
@@ -56,7 +56,7 @@ body {
     }
   }
   .player-icon {
-    background: url('../images/character/dudley.png') no-repeat;
+    background: url('../assets/character/dudley.png') no-repeat;
     display: block;
     float: left;
     height: 28px;
@@ -81,7 +81,7 @@ body {
 
 main .stance {
   @include mixins.spriteAnimation(1.5s, 20, stance, infinite);
-  background-image: url('../images/sprites/stance.png');
+  background-image: url('../assets/sprites/stance.png');
   height: 116px;
   margin-left: -225px;
   width: 106px;
@@ -97,7 +97,7 @@ main .stance {
 
 main .duck {
   @include mixins.spriteAnimation(0.8s, 10, duck, 1);
-  background-image: url('../images/sprites/duck.png');
+  background-image: url('../assets/sprites/duck.png');
   height: 76px;
   width: 97px;
 }
@@ -112,7 +112,7 @@ main .duck {
 
 main .fall {
   @include mixins.spriteAnimation(1.6s, 23, fall, 1);
-  background-image: url('../images/sprites/fall.png');
+  background-image: url('../assets/sprites/fall.png');
   height: 137px;
   width: 200px;
 }
@@ -127,7 +127,7 @@ main .fall {
 
 main .jump {
   @include mixins.spriteAnimation(1.3s, 24, jump, 1);
-  background-image: url('../images/sprites/jump.png');
+  background-image: url('../assets/sprites/jump.png');
   height: 193px;
   width: 106px;
 }
@@ -142,7 +142,7 @@ main .jump {
 
 main .rest {
   @include mixins.spriteAnimation(1.6s, 20, rest, 1);
-  background-image: url('../images/sprites/rest.png');
+  background-image: url('../assets/sprites/rest.png');
   height: 123px;
   width: 102px;
 }
@@ -157,7 +157,7 @@ main .rest {
 
 main .walk {
   @include mixins.spriteAnimation(0.7s, 12, walk, 1);
-  background-image: url('../images/sprites/walk.png');
+  background-image: url('../assets/sprites/walk.png');
   height: 125px;
   width: 116px;
 }
@@ -172,7 +172,7 @@ main .walk {
 
 main .walk-backwards {
   @include mixins.spriteAnimation(0.7s, 12, walk-backwards, 1);
-  background-image: url('../images/sprites/walk-backwards.png');
+  background-image: url('../assets/sprites/walk-backwards.png');
   height: 128px;
   width: 109px;
 }
@@ -187,7 +187,7 @@ main .walk-backwards {
 
 main .corkscrew-blow {
   @include mixins.spriteAnimation(1.6s, 31, corkscrew-blow, 1);
-  background-image: url('../images/sprites/corkscrew-blow.png');
+  background-image: url('../assets/sprites/corkscrew-blow.png');
   height: 125px;
   width: 177px;
 }
@@ -202,7 +202,7 @@ main .corkscrew-blow {
 
 main .cross {
   @include mixins.spriteAnimation(0.3s, 8, cross, 1);
-  background-image: url('../images/sprites/cross.png');
+  background-image: url('../assets/sprites/cross.png');
   height: 113px;
   width: 155px;
 }
@@ -217,7 +217,7 @@ main .cross {
 
 main .dart-shot {
   @include mixins.spriteAnimation(0.6s, 16, dart-shot, 1);
-  background-image: url('../images/sprites/dart-shot.png');
+  background-image: url('../assets/sprites/dart-shot.png');
   height: 116px;
   width: 143px;
 }
@@ -232,7 +232,7 @@ main .dart-shot {
 
 main .hook {
   @include mixins.spriteAnimation(0.3s, 13, hook, 1);
-  background-image: url('../images/sprites/hook.png');
+  background-image: url('../assets/sprites/hook.png');
   height: 116px;
   width: 118px;
 }
@@ -247,7 +247,7 @@ main .hook {
 
 main .jab {
   @include mixins.spriteAnimation(0.2s, 6, jab, 1);
-  background-image: url('../images/sprites/jab.png');
+  background-image: url('../assets/sprites/jab.png');
   height: 113px;
   width: 141px;
 }
@@ -262,7 +262,7 @@ main .jab {
 
 main .jet-uppercut {
   @include mixins.spriteAnimation(1.6s, 26, jet-uppercut, 1);
-  background-image: url('../images/sprites/jet-uppercut.png');
+  background-image: url('../assets/sprites/jet-uppercut.png');
   height: 199px;
   width: 152px;
 }
@@ -277,7 +277,7 @@ main .jet-uppercut {
 
 main .jumping-elbow {
   @include mixins.spriteAnimation(0.6s, 30, jumping-elbow, 1);
-  background-image: url('../images/sprites/jumping-elbow.png');
+  background-image: url('../assets/sprites/jumping-elbow.png');
   height: 166px;
   width: 141px;
 }
@@ -292,7 +292,7 @@ main .jumping-elbow {
 
 main .launcher {
   @include mixins.spriteAnimation(0.8s, 23, launcher, 1);
-  background-image: url('../images/sprites/launcher.png');
+  background-image: url('../assets/sprites/launcher.png');
   height: 133px;
   width: 182px;
 }
@@ -307,7 +307,7 @@ main .launcher {
 
 main .uppercut {
   @include mixins.spriteAnimation(0.5s, 18, uppercut, 1);
-  background-image: url('../images/sprites/uppercut.png');
+  background-image: url('../assets/sprites/uppercut.png');
   height: 138px;
   width: 127px;
 }
@@ -322,7 +322,7 @@ main .uppercut {
 
 main .block {
   @include mixins.spriteAnimation(0.8s, 10, block, 1);
-  background-image: url('../images/sprites/block.png');
+  background-image: url('../assets/sprites/block.png');
   height: 114px;
   width: 93px;
 }
@@ -337,7 +337,7 @@ main .block {
 
 main .entrance {
   @include mixins.spriteAnimation(8.8s, 63, entrance, 1);
-  background-image: url('../images/sprites/entrance.png');
+  background-image: url('../assets/sprites/entrance.png');
   height: 219px;
   margin-left: -275px;
   width: 154px;

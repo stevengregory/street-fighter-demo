@@ -1,6 +1,6 @@
 # Street Fighter Demo (Featuring Dudley)
 
-A lightweight browser-based demo inspired by Street Fighter III: 3rd Strike, featuring [Dudley](<https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)>) as the sole playable character, built with TypeScript.
+A lightweight browser-based demo inspired by Street Fighter III: 3rd Strike, featuring [Dudley](<https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)>) as the sole playable character; built with TypeScript, Lit, and Vite.
 
 ![Street Fighter](http://i.imgur.com/titqNDJ.png)
 
