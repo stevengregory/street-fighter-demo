@@ -32,7 +32,7 @@ export default class Action {
   }
 
   public doMove(): void {
-    if (this.isAnimating()) {
+    if (this.isBlocked()) {
       return;
     }
     this.updatePosture();
@@ -64,7 +64,10 @@ export default class Action {
     return ['walk', 'walk-backwards'];
   }
 
-  private isAnimating(): boolean {
+  private isBlocked(): boolean {
+    if (this.movement === 'entrance') {
+      return false;
+    }
     const classes = this.getCurrentClasses();
     const allowedClasses = new Set([
       this.movement,
