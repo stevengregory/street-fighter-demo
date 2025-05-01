@@ -6,11 +6,16 @@ import Action from '../app/action';
 
 @customElement('sf-player')
 export class SFPlayer extends LitElement {
+  static properties = {
+    name: { type: String }
+  };
+  declare name: string;
   private musicStarted = false;
   private entranceAction: Action;
 
   constructor() {
     super();
+    this.name = 'dudley';
     this.entranceAction = new Action('entrance', '', false, false);
   }
 
@@ -63,5 +68,9 @@ export class SFPlayer extends LitElement {
 
   get element(): HTMLElement | null {
     return this.querySelector('.character span');
+  }
+
+  get playerName(): string {
+    return this.name;
   }
 }

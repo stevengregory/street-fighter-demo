@@ -6,15 +6,20 @@ export class SFStage extends LitElement {
   createRenderRoot() {
     return this;
   }
+
+  private getPlayerName(): string {
+    const player = this.querySelector('sf-player') as any;
+    return player?.playerName ?? 'dudley';
+  }
+
   render() {
     return html`
       <div class="logo"></div>
-      <main role="main">
-        <div class="health">
-          <progress max="100" value="100"></progress>
-          <span class="player-icon"></span>
-          <p>dudley</p>
-        </div>
+      <main>
+        <sf-health
+          playerName="${this.getPlayerName()}"
+          health="100"
+        ></sf-health>
         <sf-player></sf-player>
       </main>
     `;
