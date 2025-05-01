@@ -1,4 +1,4 @@
-import '../sass/style.scss';
+import '../styles/main.scss';
 import '../components/sf-player';
 import '../components/sf-stage';
 import { setInitialStance } from './player';
