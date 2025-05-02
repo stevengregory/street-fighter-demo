@@ -15,20 +15,18 @@ export default class Action {
     public requiredKeys?: MoveConfig['requiredKeys']
   ) {}
 
-  private doAnimation(): void {
-    this.withPlayer((player) => {
-      player.classList.add(this.movement);
-      player.addEventListener(
-        'animationend',
-        () => {
-          player.classList.remove(this.movement);
-          if (GameState.playerPosture !== Posture.Standing && this.posture) {
-            GameState.setPosture(Posture.Standing);
-          }
-        },
-        { once: true }
-      );
-    });
+  private doAnimation(player: HTMLElement): void {
+    player.classList.add(this.movement);
+    player.addEventListener(
+      'animationend',
+      () => {
+        player.classList.remove(this.movement);
+        if (GameState.playerPosture !== Posture.Standing && this.posture) {
+          GameState.setPosture(Posture.Standing);
+        }
+      },
+      { once: true }
+    );
   }
 
   public doMove(): void {
@@ -36,16 +34,16 @@ export default class Action {
       return;
     }
     this.updatePosture();
-    if (this.step !== false) {
-      this.moveCharacter(this.step);
-      GameState.movePlayer(this.step);
-    }
     this.withPlayer((player) => {
+      if (this.step !== false) {
+        this.moveCharacter(this.step, player);
+        GameState.movePlayer(this.step);
+      }
       if (!player.classList.contains(this.movement)) {
         if (this.sound !== false) {
-          this.playSound();
+          this.playSound(player);
         } else {
-          this.doAnimation();
+          this.doAnimation(player);
         }
       }
     });
@@ -77,16 +75,14 @@ export default class Action {
     return classes.some((className) => !allowedClasses.has(className));
   }
 
-  private moveCharacter(step: number): void {
-    this.withPlayer((player) => {
-      const current = parseFloat(getComputedStyle(player).marginLeft || '0');
-      player.style.marginLeft = `${current + step}px`;
-    });
+  private moveCharacter(step: number, player: HTMLElement): void {
+    const current = parseFloat(getComputedStyle(player).marginLeft || '0');
+    player.style.marginLeft = `${current + step}px`;
   }
 
-  private playSound(): void {
+  private playSound(player: HTMLElement): void {
     SoundManager.play(this.movement);
-    this.doAnimation();
+    this.doAnimation(player);
   }
 
   private updatePosture(): void {
