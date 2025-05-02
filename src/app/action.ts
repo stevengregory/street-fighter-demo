@@ -40,11 +40,9 @@ export default class Action {
         GameState.movePlayer(this.step);
       }
       if (!player.classList.contains(this.movement)) {
-        if (this.sound !== false) {
-          this.playSound(player);
-        } else {
-          this.doAnimation(player);
-        }
+        this.sound !== false
+          ? this.playSound(player)
+          : this.doAnimation(player);
       }
     });
   }
