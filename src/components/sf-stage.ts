@@ -1,5 +1,6 @@
 import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
+import { SFPlayer } from './sf-player';
 
 @customElement('sf-stage')
 export class SFStage extends LitElement {
@@ -8,7 +9,7 @@ export class SFStage extends LitElement {
   }
 
   private getPlayerName(): string {
-    const player = this.querySelector('sf-player') as any;
+    const player = this.querySelector('sf-player') as SFPlayer;
     return player?.playerName ?? 'dudley';
   }
 
