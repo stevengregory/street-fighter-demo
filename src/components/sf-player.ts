@@ -1,8 +1,8 @@
 import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { SoundManager } from '../app/sound-manager';
+import { EntranceManager } from '../app/entrance';
 import { Config } from '../app/config';
-import Action from '../app/action';
 
 @customElement('sf-player')
 export class SFPlayer extends LitElement {
@@ -11,12 +11,12 @@ export class SFPlayer extends LitElement {
   };
   declare name: string;
   private musicStarted = false;
-  private entranceAction: Action;
+  private entranceManager: EntranceManager;
 
   constructor() {
     super();
     this.name = 'dudley';
-    this.entranceAction = new Action('entrance', '', false, false);
+    this.entranceManager = new EntranceManager();
   }
 
   createRenderRoot() {
@@ -25,10 +25,11 @@ export class SFPlayer extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    this.playEntrance();
   }
 
   firstUpdated() {
+    this.entranceManager.setElement(this.element);
+    this.entranceManager.playEntrance();
     if (Config.playBackgroundMusic) {
       window.addEventListener('keydown', () => {
         if (!this.musicStarted) {
@@ -37,25 +38,6 @@ export class SFPlayer extends LitElement {
         }
       });
     }
-  }
-
-  private playEntrance() {
-    const element = this.element;
-    if (!element) {
-      requestAnimationFrame(() => this.playEntrance());
-      return;
-    }
-    element.addEventListener(
-      'animationend',
-      () => {
-        if (element.classList.contains('entrance')) {
-          element.classList.remove('entrance');
-          element.classList.add('stance');
-        }
-      },
-      { once: true }
-    );
-    this.entranceAction.doMove();
   }
 
   render() {
