@@ -1,4 +1,4 @@
 export const Config = {
   playBackgroundMusic: false,
-  musicVolume: 0.10,
+  musicVolume: 0.1,
 };

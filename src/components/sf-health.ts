@@ -5,7 +5,7 @@ import { customElement } from 'lit/decorators.js';
 export class SFHealth extends LitElement {
   static properties = {
     playerName: { type: String },
-    health: { type: Number }
+    health: { type: Number },
   };
   declare playerName: string;
   declare health: number;

@@ -5,7 +5,7 @@ export function getPosture(movement: string): Posture | undefined {
     duck: Posture.Crouching,
     jump: Posture.Jumping,
     walk: Posture.Standing,
-    'walk-backwards': Posture.Standing
+    'walk-backwards': Posture.Standing,
   };
   return postureMap[movement];
 }

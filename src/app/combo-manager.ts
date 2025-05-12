@@ -1,6 +1,6 @@
 import { GameState } from './game-state';
 import { moves } from './moves';
-import { MoveConfig } from '../types/move-config';
+import type { MoveConfig } from '../types/move-config';
 
 export class ComboManager {
   static onMoveKey(key: string, pressedKeys: Set<string>): void {
@@ -23,10 +23,10 @@ export class ComboManager {
     }
     if (move.requiredKeys?.length) {
       const hasRequiredKeys = move.requiredKeys.every((key) =>
-        pressedKeys.has(key)
+        pressedKeys.has(key),
       );
       const hasDirectionalInput = move.requiredKeys.some((key) =>
-        key.startsWith('Arrow')
+        key.startsWith('Arrow'),
       );
       if (hasDirectionalInput) {
         return hasRequiredKeys;

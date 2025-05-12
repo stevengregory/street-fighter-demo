@@ -7,7 +7,7 @@ import { Config } from '../app/config';
 @customElement('sf-player')
 export class SFPlayer extends LitElement {
   static properties = {
-    name: { type: String }
+    name: { type: String },
   };
   declare name: string;
   private musicStarted = false;

@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { SFPlayer } from './sf-player';
+import type { SFPlayer } from './sf-player';
 
 @customElement('sf-stage')
 export class SFStage extends LitElement {

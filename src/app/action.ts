@@ -1,9 +1,9 @@
 import { GameState } from './game-state';
 import { getPlayer } from './player';
 import { getPosture } from './posture';
-import { MoveConfig } from '../types/move-config';
 import { Posture } from '../types/posture';
 import { SoundManager } from './sound-manager';
+import type { MoveConfig } from '../types/move-config';
 
 export default class Action {
   constructor(
@@ -12,7 +12,7 @@ export default class Action {
     public step: MoveConfig['step'],
     public sound: MoveConfig['sound'] = true,
     public posture?: MoveConfig['posture'],
-    public requiredKeys?: MoveConfig['requiredKeys']
+    public requiredKeys?: MoveConfig['requiredKeys'],
   ) {}
 
   private doAnimation(player: HTMLElement): void {
@@ -25,7 +25,7 @@ export default class Action {
           GameState.setPosture(Posture.Standing);
         }
       },
-      { once: true }
+      { once: true },
     );
   }
 
@@ -68,7 +68,7 @@ export default class Action {
     const allowedClasses = new Set([
       this.movement,
       ...this.getBasicMoves(),
-      ...this.getWalkingMoves()
+      ...this.getWalkingMoves(),
     ]);
     return classes.some((className) => !allowedClasses.has(className));
   }

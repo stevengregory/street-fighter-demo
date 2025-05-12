@@ -1,5 +1,5 @@
-import { MoveName, MoveKey } from '../types/move';
-import { Posture } from '../types/posture';
+import type { Posture } from '../types/posture';
+import type { MoveName, MoveKey } from '../types/move';
 
 export interface MoveConfig {
   movement: MoveName;

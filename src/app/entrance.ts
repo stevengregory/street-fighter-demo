@@ -27,7 +27,7 @@ export class EntranceManager {
           this.element.classList.add('stance');
         }
       },
-      { once: true }
+      { once: true },
     );
     this.entranceAction.doMove();
   }
