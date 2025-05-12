@@ -7,8 +7,10 @@
     "url": "https://github.com/stevengregory/street-fighter-demo.git"
   },
   "scripts": {
-    "format": "prettier --write .",
-    "start": "vite --host"
+    "format": "biome format --write .",
+    "start": "vite --host",
+    "lint": "biome lint .",
+    "check": "biome check --apply ."
   },
   "type": "module",
   "license": "ISC",
@@ -18,7 +20,7 @@
     "vite": "^6.3.4"
   },
   "devDependencies": {
-    "prettier": "^3.5.3",
+    "@biomejs/biome": "^1.9.4",
     "typescript": "^5.8.3"
   }
 }
