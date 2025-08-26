@@ -74,7 +74,9 @@ export default class Action {
   }
 
   private moveCharacter(step: number, player: HTMLElement): void {
-    const current = parseFloat(getComputedStyle(player).marginLeft || '0');
+    const current = Number.parseFloat(
+      getComputedStyle(player).marginLeft || '0',
+    );
     player.style.marginLeft = `${current + step}px`;
   }
 
