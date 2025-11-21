@@ -1,31 +1,31 @@
 # Street Fighter Demo (Featuring Dudley)
 
-A lightweight browser-based demo inspired by Street Fighter III: 3rd Strike, featuring [Dudley](<https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)>) as the sole playable character; built with TypeScript, Lit, and Vite.
+A lightweight browser-based demo inspired by Street Fighter III: 3rd Strike, featuring [Dudley](https://en.wikipedia.org/wiki/Dudley_(Street_Fighter)) as the sole playable character; built with TypeScript, Lit, and Vite.
 
-![Street Fighter](http://i.imgur.com/titqNDJ.png)
+![Street Fighter](https://i.imgur.com/titqNDJ.png)
 
-## 🚀 Getting Started
+## Getting Started
 
 ```bash
 git clone https://github.com/stevengregory/street-fighter-demo.git
 cd street-fighter-demo
 ```
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install
 ```
 
-## 🏃 Running
+## Running
 
 ```bash
 npm start
 ```
 
-## 🎮 Keyboard Moves
+## Keyboard Moves
 
-### 🥊 Basic Attacks
+### Basic Attacks
 
 | Move              | Key   | Notes                |
 | ----------------- | ----- | -------------------- |
@@ -37,14 +37,14 @@ npm start
 | **Dart Shot**     | `→ d` | Overhead attack      |
 | **Jumping Elbow** | `↑ e` | Mid-air elbow strike |
 
-### 💥 Special Moves
+### Special Moves
 
 | Move               | Key     | Notes           |
 | ------------------ | ------- | --------------- |
 | **Jet Upper**      | `↓ → u` | Rising uppercut |
 | **Corkscrew Blow** | `↓ ← k` | Super Art III   |
 
-### 🕹️ Movement & Defense
+### Movement & Defense
 
 | Action        | Key | Notes                 |
 | ------------- | --- | --------------------- |
