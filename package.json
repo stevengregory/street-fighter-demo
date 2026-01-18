@@ -15,12 +15,12 @@
   "type": "module",
   "license": "ISC",
   "dependencies": {
-    "lit": "^3.3.1",
-    "sass": "^1.94.2",
-    "vite": "^7.2.4"
+    "lit": "^3.3.2",
+    "sass": "^1.97.2",
+    "vite": "^7.3.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.6",
+    "@biomejs/biome": "^2.3.11",
     "typescript": "^5.9.3"
   }
 }
