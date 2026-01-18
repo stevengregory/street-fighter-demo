@@ -1,5 +1,5 @@
-import { Posture } from '../types/posture';
 import type { MoveConfig } from '../types/move-config';
+import { Posture } from '../types/posture';
 
 export const moveConfigs: MoveConfig[] = [
   {

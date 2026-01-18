@@ -1,6 +1,6 @@
+import type { MoveConfig } from '../types/move-config';
 import { GameState } from './game-state';
 import { moves } from './moves';
-import type { MoveConfig } from '../types/move-config';
 
 function requiresPosture(move: MoveConfig): boolean {
   return move.posture !== undefined;

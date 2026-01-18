@@ -3,9 +3,9 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   root: 'src',
   server: {
-    host: true
+    host: true,
   },
   build: {
-    target: 'esnext'
-  }
+    target: 'esnext',
+  },
 });

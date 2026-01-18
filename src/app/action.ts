@@ -1,9 +1,9 @@
+import type { MoveConfig } from '../types/move-config';
+import { Posture } from '../types/posture';
 import { GameState } from './game-state';
 import { getPlayer } from './player';
 import { getPosture } from './posture';
-import { Posture } from '../types/posture';
 import { SoundManager } from './sound-manager';
-import type { MoveConfig } from '../types/move-config';
 
 export default class Action {
   constructor(

@@ -1,8 +1,8 @@
-import { LitElement, html } from 'lit';
+import { html, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { SoundManager } from '../app/sound-manager';
-import { EntranceManager } from '../app/entrance';
 import { Config } from '../app/config';
+import { EntranceManager } from '../app/entrance';
+import { SoundManager } from '../app/sound-manager';
 
 @customElement('sf-player')
 export class SFPlayer extends LitElement {

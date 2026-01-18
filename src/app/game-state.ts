@@ -7,20 +7,20 @@ export class GameState {
   static workingSpaceWidth: number = 679;
 
   static reset(): void {
-    this.playerPositionX = 20;
-    this.playerFacing = 'right';
-    this.playerPosture = Posture.Standing;
+    GameState.playerPositionX = 20;
+    GameState.playerFacing = 'right';
+    GameState.playerPosture = Posture.Standing;
   }
 
   static movePlayer(step: number): void {
-    this.playerPositionX += step;
+    GameState.playerPositionX += step;
   }
 
   static setPosture(posture: Posture): void {
-    this.playerPosture = posture;
+    GameState.playerPosture = posture;
   }
 
   static setWorkingSpaceWidth(width: number): void {
-    this.workingSpaceWidth = width;
+    GameState.workingSpaceWidth = width;
   }
 }
