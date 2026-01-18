@@ -1,26 +1,26 @@
 import { Posture } from '../types/posture';
 
-export class GameState {
-  static playerPositionX: number = 20;
-  static playerFacing: 'right' | 'left' = 'right';
-  static playerPosture: Posture = Posture.Standing;
-  static workingSpaceWidth: number = 679;
+export const GameState = {
+  playerPositionX: 20,
+  playerFacing: 'right' as 'right' | 'left',
+  playerPosture: Posture.Standing,
+  workingSpaceWidth: 679,
 
-  static reset(): void {
+  reset(): void {
     GameState.playerPositionX = 20;
     GameState.playerFacing = 'right';
     GameState.playerPosture = Posture.Standing;
-  }
+  },
 
-  static movePlayer(step: number): void {
+  movePlayer(step: number): void {
     GameState.playerPositionX += step;
-  }
+  },
 
-  static setPosture(posture: Posture): void {
+  setPosture(posture: Posture): void {
     GameState.playerPosture = posture;
-  }
+  },
 
-  static setWorkingSpaceWidth(width: number): void {
+  setWorkingSpaceWidth(width: number): void {
     GameState.workingSpaceWidth = width;
-  }
-}
+  },
+};
