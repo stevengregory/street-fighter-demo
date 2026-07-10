@@ -8,7 +8,6 @@ export const moveConfigs: MoveConfig[] = [
     step: false,
     sound: false,
     requiredKeys: false,
-    isSpecialMove: false,
   },
   {
     movement: 'corkscrew-blow',
@@ -16,7 +15,6 @@ export const moveConfigs: MoveConfig[] = [
     step: false,
     sound: true,
     requiredKeys: ['ArrowDown', 'ArrowLeft'],
-    isSpecialMove: true,
   },
   {
     movement: 'cross',
@@ -24,7 +22,6 @@ export const moveConfigs: MoveConfig[] = [
     step: false,
     sound: true,
     requiredKeys: false,
-    isSpecialMove: false,
   },
   {
     movement: 'dart-shot',
@@ -32,7 +29,6 @@ export const moveConfigs: MoveConfig[] = [
     step: false,
     sound: true,
     requiredKeys: ['ArrowRight'],
-    isSpecialMove: false,
   },
   {
     movement: 'duck',
@@ -40,7 +36,6 @@ export const moveConfigs: MoveConfig[] = [
     step: false,
     sound: false,
     requiredKeys: false,
-    isSpecialMove: false,
   },
   {
     movement: 'fall',
@@ -48,7 +43,6 @@ export const moveConfigs: MoveConfig[] = [
     step: false,
     sound: true,
     requiredKeys: false,
-    isSpecialMove: false,
   },
   {
     movement: 'hook',
@@ -56,7 +50,6 @@ export const moveConfigs: MoveConfig[] = [
     step: false,
     sound: true,
     requiredKeys: false,
-    isSpecialMove: false,
   },
   {
     movement: 'jab',
@@ -64,7 +57,6 @@ export const moveConfigs: MoveConfig[] = [
     step: false,
     sound: true,
     requiredKeys: false,
-    isSpecialMove: false,
   },
   {
     movement: 'jet-uppercut',
@@ -72,7 +64,6 @@ export const moveConfigs: MoveConfig[] = [
     step: false,
     sound: true,
     requiredKeys: ['ArrowDown', 'ArrowRight'],
-    isSpecialMove: true,
   },
   {
     movement: 'jump',
@@ -80,7 +71,6 @@ export const moveConfigs: MoveConfig[] = [
     step: false,
     sound: false,
     requiredKeys: false,
-    isSpecialMove: false,
   },
   {
     movement: 'jumping-elbow',
@@ -89,7 +79,6 @@ export const moveConfigs: MoveConfig[] = [
     sound: true,
     posture: Posture.Jumping,
     requiredKeys: ['ArrowUp'],
-    isSpecialMove: false,
   },
   {
     movement: 'launcher',
@@ -98,7 +87,6 @@ export const moveConfigs: MoveConfig[] = [
     sound: true,
     posture: Posture.Crouching,
     requiredKeys: ['ArrowDown'],
-    isSpecialMove: false,
   },
   {
     movement: 'rest',
@@ -106,7 +94,6 @@ export const moveConfigs: MoveConfig[] = [
     step: false,
     sound: false,
     requiredKeys: false,
-    isSpecialMove: false,
   },
   {
     movement: 'uppercut',
@@ -114,7 +101,6 @@ export const moveConfigs: MoveConfig[] = [
     step: false,
     sound: true,
     requiredKeys: false,
-    isSpecialMove: false,
   },
   {
     movement: 'walk',
@@ -122,7 +108,6 @@ export const moveConfigs: MoveConfig[] = [
     step: 30,
     sound: false,
     requiredKeys: false,
-    isSpecialMove: false,
   },
   {
     movement: 'walk-backwards',
@@ -130,7 +115,6 @@ export const moveConfigs: MoveConfig[] = [
     step: -30,
     sound: false,
     requiredKeys: false,
-    isSpecialMove: false,
   },
   {
     movement: 'entrance',
@@ -138,6 +122,5 @@ export const moveConfigs: MoveConfig[] = [
     step: false,
     sound: false,
     requiredKeys: false,
-    isSpecialMove: false,
   },
 ];
