@@ -8,5 +8,4 @@ export interface MoveConfig {
   sound: boolean;
   posture?: Posture;
   requiredKeys?: MoveKey[] | false;
-  isSpecialMove?: boolean;
 }
